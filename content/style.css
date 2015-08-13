@@ -124,7 +124,7 @@
 
   .header_2 .small_widget{float:left;padding-top: 10px; padding-right: 11px; border-right: 1px solid #ddd; padding-left: 11px; padding-bottom: 10px;}
 
-  .header_2 .small_widget a{color:#777;}
+  .header_2 .small_widget a{color:#fbfbfb;}
 
   .header_2 .small_widget i{padding-right:7px;}
 
@@ -144,7 +144,7 @@
   }
 
 
-  .header_2 .footer_social_icons li , .header_4_right .footer_social_icons li{background-image: url(img/team-about.png) !important; background-repeat:no-repeat !important; }
+  /*.header_2 .footer_social_icons li , .header_4_right .footer_social_icons li{background-image: url(img/team-about.png) !important; background-repeat:no-repeat !important; }*/
 
   .header_2 .footer_social_icons li:hover,  .header_4_right .footer_social_icons li:hover {background-image: url(img/team-about.png) !important; background-repeat:no-repeat !important; }
 
@@ -363,12 +363,8 @@
 
 
 
-  #logo img{ max-width:none;top: 50%;
-
-  position: relative;
-
-  margin-top: -23px;  
-
+  #logo img{
+      max-width:none;
   }
 
 
@@ -923,7 +919,7 @@
 
   #copyright .footer_social_icons li.behance, .social_icons li.behance{background:url('img/social-icons-small.png') no-repeat; background-position:-337px 0px;}
 
-  #copyright .footer_social_icons li.deviantart, .social_icons li.deviantart{background:url('img/social-icons-small.png') no-repeat; background-position:-363px 0px;} 
+  #copyright .footer_social_icons li.deviantart, .social_icons li.deviantart{background:url('img/social-icons-small.png') no-repeat; background-position:-363px 0px;}
 
   #copyright .footer_social_icons li.digg, .social_icons li.digg{background:url('img/social-icons-small.png') no-repeat; background-position:-389px 0px;}
 
@@ -953,7 +949,7 @@
 
   #copyright .footer_social_icons li.dribble:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-108px -24px;}
 
-  #copyright .footer_social_icons li.twitter:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-134px -24px;}
+  #copyright .footer_social_icons li.twitter:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-134px 0px;}
 
   #copyright .footer_social_icons li.facebook:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-161px -24px;}
 
@@ -971,7 +967,7 @@
 
   #copyright .footer_social_icons li.behance:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-337px -24px;}
 
-  #copyright .footer_social_icons li.deviantart:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-363px -24px;} 
+  #copyright .footer_social_icons li.deviantart:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-363px -24px;}
 
   #copyright .footer_social_icons li.digg:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-389px -24px;}
 
@@ -1103,7 +1099,7 @@
 
   .footer_social_icons li.dribble {background:url('img/social-icons-small-team.png') no-repeat; background-position:-108px 0px;}
 
-  .footer_social_icons li.twitter{background:url('img/social-icons-small-team.png') no-repeat; background-position:-134px 0px;}
+  .footer_social_icons li.twitter{background:url('img/social-icons-small-team.png') no-repeat; background-position:-134px -24px;}
 
   .footer_social_icons li.facebook{background:url('img/social-icons-small-team.png') no-repeat; background-position:-162px 0px;}
 
@@ -1475,7 +1471,7 @@
 
   .single-post .shares .social_ic a{float:left;}
 
-  .single-post .shares .social_ic i{font-size:16px; color:#bfbfbf;  -webkit-transition-duration: 0.4s;
+  .single-post .shares .social_ic i{font-size:16px; color:#fbfbfb;  -webkit-transition-duration: 0.4s;
 
       -moz-transition-duration: 0.4s;
 
@@ -6046,7 +6042,11 @@
 
   /* Headers */
 
-  body.header_2 .top_nav{background:#fafafa; color:#b0b0b0; border-bottom:1px solid #e1e1e1;}
+  body.header_2 .top_nav {
+      background: url(/images/topbar_bg.png) repeat-x;
+      color:#fbfbfb;
+      border-bottom:1px solid #e1e1e1;
+  }
 
   body.header_2 .top_nav .widget{border:none}
 
@@ -6054,7 +6054,7 @@
 
   body.header_2 .top_nav .social_widget i{color:#e1e1e1}
 
-  body.header_2 .top_nav .social_widget a:hover i{color:#b0b0b0}
+  body.header_2 .top_nav .social_widget a:hover i{color:#fbfbfb}
 
   body.header_3 .top_nav{color:#fff; display:none}
 

@@ -1,0 +1,20 @@
+
+/**********************************************************************************
+**** Social Media Header Icons
+***********************************************************************************/
+
+.header_social_media_icons li {
+    background-image: url('/content/img/social-icons-small-team.png');
+}
+
+.header_social_media_icons li.twitter { background-position: -134px -24px; }
+.header_social_media_icons li.twitter:hover { background-position: -134px 0px; }
+
+.header_social_media_icons li.linkedin { background-position: -33px -24px; }
+.header_social_media_icons li.linkedin:hover { background-position: -33px 0px; }
+
+.header_social_media_icons li.facebook { background-position: -161px -24px; }
+.header_social_media_icons li.facebook:hover { background-position: -161px 0px; }
+
+.header_social_media_icons li.youtube { background-position: -467px -24px; }
+.header_social_media_icons li.youtube:hover { background-position: -467px 0px; }
