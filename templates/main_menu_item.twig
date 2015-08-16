@@ -1,4 +1,11 @@
-<li class="{% if config.page_name == href %}current-menu-item current_page_item{% endif %}">
+{% set current_menu_item = false %}
+{% for submenu_item in submenu %}
+  {% if config.page_name == submenu_item.href %}
+    {% set current_menu_item = true %}
+  {% endif %}
+{% endfor %}
+
+<li class="{% if config.page_name == href %}current-menu-item current_page_item{% elseif current_menu_item %}current-menu-item{% endif %}">
   <a href="{{ href }}">{{ label }}</a>
   {% if submenu %}
     <ul class="sub-menu">

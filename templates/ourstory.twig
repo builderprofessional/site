@@ -1,0 +1,68 @@
+{% extends "base.twig" %}
+
+{% block main_content %}
+  {% include 'content_page_header.twig' with {
+    'pageTitle': 'Our Story',
+    'breadcrumbs': [
+      {'href': 'index.php', 'label': 'Home'},
+      {'href': 'contact.php', 'label': 'Our Company'},
+      {'href': 'ourstory.php', 'label': 'Our Story'}
+    ]
+  } %}
+
+  <section id="content" class="page-dynamic_template-about2 sequentialchildren  section_last">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="row-fluid row-dynamic-el">
+          <div class="container">
+            <div class="row-fluid">
+
+              <div class="span4" style="text-align: center">
+                <img src='/images/team/rick.jpg' title='misc-4' alt=''/>
+              </div>
+
+              <div class="span8 plain_text alignment_left">
+
+                <h2 class="big_title" style="color:#555;">Our History as Builders Software Enterprises</h2>
+                <p class="content"  style="color:#999;">
+                  On August 20th, 1990 Rick Powell founded Builders Software Enterprises. That was the date Rick Powell
+                  sold his first estimating software program to a homebuilder in Fort Worth, Texas. Rick's ten year
+                  experience as a homebuilder gave him the background to create a software system that would work
+                  logically for a builder.
+                </p>
+
+                <h2 class="big_title" style="color:#555;">How Rick and I Got Started</h2>
+                <p class="content"  style="color:#999;">
+                  I'm Tony Vance, CEO of Builder Professional, and I first went to work for Rick in 1999 as a software
+                  developer. That was my first job as a software developer. Rick met me and decided to give me a shot,
+                  and we went right to work on the BSE Estimator 2000. The BSE Estimator 2000 was released in February
+                  of 2000, and a long-time partnership was formed. We also built the next two versions of the BSE
+                  Estimator together over the next eight years.
+                </p>
+
+                <h2 class="big_title" style="color:#555;">We Are Now Builder Professional</h2>
+                <p class="content"  style="color:#999;">
+                  Very sadly, in May of this year, my friend Rick Powell passed away unexpectedly.
+                  A lot of our customers knew Rick well, and most people that knew Rick liked him a lot. We
+                  started Builder Professional to carry on the work that he started and continue to serve homebuilders
+                  and their needs. Rick asked me many times to carry on this legacy after he retired,
+                  so when he passed unexpectedly, I felt like we should keep going. Rick's daughter Carmen agreed, and
+                  after some planning and careful thought, Builder Professional was born.
+
+                  <br /><br />
+
+                  We are proud to work with the great team that Rick had already assembled and cultivated, and I am
+                  confident that not only does Builder Professional come from a great BSE tradition, but Builder
+                  Professional will continue to push forward.
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br style="clear: both" />
+{% endblock %}
