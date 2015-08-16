@@ -1,0 +1,23 @@
+<div class="header_page">
+  <div class="container">
+    <div class="row-fluid">
+
+      <div class="span6">
+        <h4>{{ pageTitle }}</h4>
+      </div>
+
+      <div class="breadcrumbss">
+        <ul class="page_parents pull-right">
+          <li>You are here: </li>
+          {% for breadcrumb in breadcrumbs %}
+            <li>
+              <a href="{{ breadcrumb.href }}">{{ breadcrumb.label }}</a>
+              {% if not loop.last %} / {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>

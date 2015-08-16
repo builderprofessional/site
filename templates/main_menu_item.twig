@@ -1,3 +1,10 @@
 <li class="{% if config.page_name == href %}current-menu-item current_page_item{% endif %}">
   <a href="{{ href }}">{{ label }}</a>
+  {% if submenu %}
+    <ul class="sub-menu">
+      {% for submenu_item in submenu %}
+        <li><a href="{{ submenu_item.href }}">{{ submenu_item.label }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 </li>

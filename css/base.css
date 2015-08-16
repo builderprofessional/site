@@ -1,4 +1,18 @@
 
+.header_2 .top_nav{
+    height: 20px;
+}
+
+.logo_header_row {
+    height: 100px !important;
+}
+
+.top_wrapper{
+    position: relative;
+    padding-top: 131px
+}
+
+
 /**********************************************************************************
 **** Social Media Header Icons
 ***********************************************************************************/
@@ -7,14 +21,27 @@
     background-image: url('/content/img/social-icons-small-team.png');
 }
 
-.header_social_media_icons li.twitter { background-position: -134px -24px; }
-.header_social_media_icons li.twitter:hover { background-position: -134px 0px; }
+.header_social_media_icons li.twitter { background-position: -134px -28px; }
+.header_social_media_icons li.twitter:hover { background-position: -134px -4px; }
 
-.header_social_media_icons li.linkedin { background-position: -33px -24px; }
-.header_social_media_icons li.linkedin:hover { background-position: -33px 0px; }
+.header_social_media_icons li.linkedin { background-position: -33px -28px; }
+.header_social_media_icons li.linkedin:hover { background-position: -33px -4px; }
 
-.header_social_media_icons li.facebook { background-position: -161px -24px; }
-.header_social_media_icons li.facebook:hover { background-position: -161px 0px; }
+.header_social_media_icons li.facebook { background-position: -161px -28px; }
+.header_social_media_icons li.facebook:hover { background-position: -161px -4px; }
 
-.header_social_media_icons li.youtube { background-position: -467px -24px; }
-.header_social_media_icons li.youtube:hover { background-position: -467px 0px; }
+.header_social_media_icons li.youtube { background-position: -467px -28px; }
+.header_social_media_icons li.youtube:hover { background-position: -467px -4px; }
+
+
+/**********************************************************************************
+**** Our Team Page
+***********************************************************************************/
+
+.one-staff {
+  float: left;
+  width: 85%;
+  display:inline-block;
+  padding-right: 15px;
+  padding-left: 15px;
+}

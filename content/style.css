@@ -116,11 +116,11 @@
 
 
 
-  .header_2 .top_nav{height:40px; }
+
 
   .header_2 .top_nav .small_widget{text-shadow:none; color:#777}
 
-  .header_2 .top_nav .widget_topnav{border-left:1px solid #ddd !important;}
+  /*.header_2 .top_nav .widget_topnav{border-left:1px solid #ddd !important;}*/
 
   .header_2 .small_widget{float:left;padding-top: 10px; padding-right: 11px; border-right: 1px solid #ddd; padding-left: 11px; padding-bottom: 10px;}
 
@@ -154,7 +154,7 @@
 
 
 
-  .header_2 .top_nav .widget ul{margin-top:9px}
+  .header_2 .top_nav .widget ul{margin-top:2px}
 
   .top_nav{width:100%; position:relative; top:0; left:0; 
 
@@ -272,7 +272,7 @@
 
 
 
-  .top_nav .widget ul{float:left; list-style:none; margin:0; padding:0; margin-top:4px;}
+  .top_nav .widget ul{float:left; list-style:none; margin:0; padding:0; }
 
   .top_nav .widget ul li{float:left; margin-left:8px;}
 
@@ -665,22 +665,14 @@
 
   .select-menu{display:none}
 
-  .header_page{width: 100%;
-
-  position: relative;
-
-  height: 80px;
-
-  float: left;
-
-  margin-bottom: 75px;
-
-  background: #f4f4f4 url('img/header_.png') center no-repeat;
-
-  border-bottom: 1px solid #ebebeb;
-
-
-
+  .header_page{
+    width: 100%;
+    position: relative;
+    height: 80px;
+    float: left;
+    margin-bottom: 25px;
+    background: #f4f4f4 url('img/header_.png') center no-repeat;
+    border-bottom: 1px solid #ebebeb;
   }
 
   .headgradient{height: 100%;
@@ -799,8 +791,6 @@
 
 
 
-  .top_wrapper{position:relative; padding-top:77px}
-
   /* Footer */
 
   footer .widget_search input[type="text"]{border:1px solid rgba(255,255,255,0.18) !important}
@@ -845,11 +835,11 @@
 
   .top_footer .pagination a:hover i{color:#fff;}
 
-  header#header .shadow{display:none; background:url('img/big_shadow_full.png') center no-repeat; width: 100%;
+  /*header#header .shadow{display:none; background:url('img/big_shadow_full.png') center no-repeat; width: 100%;*/
 
-  height: 81px;
+  /*height: 81px;*/
 
-  position: absolute;}
+  /*position: absolute;}*/
 
   .fullwidth_slider header#header .shadow{display:block}
 
@@ -902,7 +892,7 @@
   #copyright .footer_social_icons li.dribble, .social_icons li.dribble {background:url('img/social-icons-small.png') no-repeat; background-position:-108px 0px;}
 
   #copyright .footer_social_icons li.twitter, .social_icons li.twitter{background:url('img/social-icons-small.png') no-repeat; background-position:-134px 0px;}
-
+  
   #copyright .footer_social_icons li.facebook, .social_icons li.facebook{background:url('img/social-icons-small.png') no-repeat; background-position:-161px 0px;}
 
   #copyright .footer_social_icons li.flickr, .social_icons li.flickr{background:url('img/social-icons-small.png') no-repeat; background-position:-181px 0px;}
@@ -941,49 +931,49 @@
 
 
 
-  #copyright .footer_social_icons li.mail:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-2px -24px;}
+  #copyright .footer_social_icons li.mail:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-2px 0px;}
 
-  #copyright .footer_social_icons li.linkedin:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-33px -24px;}
+  #copyright .footer_social_icons li.linkedin:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-33px 0px;}
 
-  #copyright .footer_social_icons li.pinterest:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-58px -24px;}
+  #copyright .footer_social_icons li.pinterest:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-58px 0px;}
 
-  #copyright .footer_social_icons li.dribble:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-108px -24px;}
+  #copyright .footer_social_icons li.dribble:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-108px 0px;}
 
   #copyright .footer_social_icons li.twitter:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-134px 0px;}
 
-  #copyright .footer_social_icons li.facebook:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-161px -24px;}
+  #copyright .footer_social_icons li.facebook:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-161px 0px;}
 
-  #copyright .footer_social_icons li.flickr:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-181px -24px;}
+  #copyright .footer_social_icons li.flickr:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-181px 0px;}
 
-  #copyright .footer_social_icons li.search:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-207px -24px;}
+  #copyright .footer_social_icons li.search:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-207px 0px;}
 
-  #copyright .footer_social_icons li.delicious:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-233px -24px;}
+  #copyright .footer_social_icons li.delicious:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-233px 0px;}
 
-  #copyright .footer_social_icons li.skype:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-259px -24px;}
+  #copyright .footer_social_icons li.skype:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-259px 0px;}
 
-  #copyright .footer_social_icons li.forrst:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-285px -24px;}
+  #copyright .footer_social_icons li.forrst:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-285px 0px;}
 
-  #copyright .footer_social_icons li.paypal:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-311px -24px;}
+  #copyright .footer_social_icons li.paypal:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-311px 0px;}
 
-  #copyright .footer_social_icons li.behance:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-337px -24px;}
+  #copyright .footer_social_icons li.behance:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-337px 0px;}
 
-  #copyright .footer_social_icons li.deviantart:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-363px -24px;}
+  #copyright .footer_social_icons li.deviantart:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-363px 0px;}
 
-  #copyright .footer_social_icons li.digg:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-389px -24px;}
+  #copyright .footer_social_icons li.digg:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-389px 0px;}
 
-  #copyright .footer_social_icons li.vimeo:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-415px -24px;}
+  #copyright .footer_social_icons li.vimeo:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-415px 0px;}
 
-  #copyright .footer_social_icons li.yahoo:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-441px -24px;}
+  #copyright .footer_social_icons li.yahoo:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-441px 0px;}
 
-  #copyright .footer_social_icons li.youtube:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-467px -24px;}
+  #copyright .footer_social_icons li.youtube:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-467px 0px;}
 
-  #copyright .footer_social_icons li.picasa:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-493px -24px;}
+  #copyright .footer_social_icons li.picasa:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-493px 0px;}
 
-  #copyright .footer_social_icons li.reddit:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-517px -24px;}
+  #copyright .footer_social_icons li.reddit:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-517px 0px;}
 
-  #copyright .footer_social_icons li.google-plus:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-546px -24px;}
+  #copyright .footer_social_icons li.google-plus:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-546px 0px;}
 
-  #copyright .footer_social_icons li.rss:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-570px -24px;}
+  #copyright .footer_social_icons li.rss:hover{background:url('img/social-icons-small.png') no-repeat; background-position:-570px 0px;}
 
 
 
@@ -4541,7 +4531,7 @@
 
   /* Staff */
 
-  .one-staff {float: left;width: 100%;  display:inline-block;}
+
 
 
 
@@ -7021,7 +7011,7 @@
 
   .header_3 #widget_topnav-2{display:none}
 
-  . .header_page{margin-bottom:0; padding-bottom:0}
+    /*.header_page{margin-bottom:0; padding-bottom:0}*/
 
    body{background: #fbfbfb 
 

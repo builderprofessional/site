@@ -1,0 +1,65 @@
+{% extends "base.twig" %}
+
+{% block main_content %}
+  {% include 'content_page_header.twig' with {
+    'pageTitle': 'Our Team',
+    'breadcrumbs': [
+      {'href': 'index.php', 'label': 'Home'},
+      {'href': 'contact.php', 'label': 'Our Company'},
+      {'href': 'ourteam.php', 'label': 'Our Team'}
+    ]
+  } %}
+
+  <section id="content" class="page-dynamic_template-meettheteam sequentialchildren">
+    <div class="row-fluid">
+    <div class="span12">
+
+      <div class="row-fluid row-dynamic-el"><div class="container"><div class="row-fluid">
+
+        {% include 'team_member.twig' with {
+          'name': 'Tony Vance',
+          'title': 'CEO',
+          'email': 'tony.vance@builderprofessional.com',
+
+          'twitter': 'https://twitter.com/TonyVance3ES',
+          'linkedin': 'https://www.linkedin.com/pub/tony-vance/11/b7b/194',
+
+          'description': "Tony Vance has worked in software development and management for more than 15 years. He first worked for Builders Software Enterprises in 1999 and built the last three versions of the BSE Estimator."
+        } %}
+
+        {% include 'team_member.twig' with {
+          'name': 'Brent Harbolt',
+          'title': 'Customer Service Manager',
+          'email': 'brent.harbolt@builderprofessional.com',
+          'phone': '(916) WE-BUILD / (916) 932-8453',
+
+          'description': "Brent Harbolt has worked in customer service with Builder Software Enterprises since 2000. He is a passionate advocate for our customers and their needs."
+        } %}
+
+        {% include 'team_member.twig' with {
+          'name': 'Robert Flach',
+          'title': 'Director of IT',
+          'email': 'robert.flach@builderprofessional.com',
+
+          'linkedin': 'https://www.linkedin.com/in/robertflach',
+          'twitter': 'https://twitter.com/allauthors',
+
+          'description': "Robert Flach has worked in software development and IT for more than 20 years. Robert has extensive experience in systems administration and development in both technical and executive roles."
+        } %}
+
+        {% include 'team_member.twig' with {
+          'name': 'Andrew Kocher',
+          'title': 'Artistic Director',
+          'email': 'andrew.kocher@builderprofessional.com',
+
+          'linkedin': 'https://www.linkedin.com/in/andrewkocher',
+
+          'description': "Andrew Kocher has worked in multiple industries including energy regulation. He is currently an entrepreneur with a successful online store and music retail outlet in Arlington, TX."
+        } %}
+
+        </div></div></div>
+
+    </div>
+    </div>
+  </section>
+{% endblock %}
