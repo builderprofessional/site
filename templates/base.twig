@@ -93,10 +93,10 @@
             <div class="row-fluid social_row">
               <div class="span12">
                 <ul class="header_social_media_icons">
-                  <li class="linkedin"><a href="#"><span></span></a></li>
-                  <li class="twitter"><a href="#"><span></span></a></li>
-                  <li class="facebook"><a href="#"><span></span></a></li>
-                  {#<li class="youtube"><a href="#"><span></span></a></li>#}
+                  <li class="linkedin"><a target="_blank" href="#"><span>&nbsp;</span></a></li>
+                  <li class="twitter"><a target="_blank" href="{{ config.twitter }}"><span>&nbsp;</span></a></li>
+                  <li class="facebook"><a target="_blank" href="#"><span>&nbsp;</span></a></li>
+                  {#<li class="youtube"><a href="#"><span>&nbsp;</span></a></li>#}
                 </ul>
               </div>
             </div>
@@ -138,10 +138,10 @@
       <div class="container">
         <div class="row-fluid ff">
           <!-- widget -->
-          <div class="span5">
-            <div id="text-2" class="widget widget_text">
+          <div class="span3">
+            <div id="text-2" class="widget widget_text" style="padding-right: 15px">
               <div class="textwidget">
-                <img alt="img" src="content/img/maximus-logo1.png" />
+                <img alt="Builder Professional" src="/images/bplogo_white_gradient.png" style="margin-top: -15px" />
                 <br /><br />
                 You can count on Builder Professional putting the builder first. <a href="contact.php">Contact Us</a> with
                 any questions, ideas, or concerns that you have. We want to help you be the most effective building
@@ -160,12 +160,18 @@
               <ul>
                 <li class="address">Address: <span>PO Box 121068 Arlington, TX 76012</span></li>
                 <li class="phone">Phone: <span>(916) WE-BUILD / (916) 932-8453</span></li>
-                <li class="email">Email: <span>support@builderprofessional.com</span></li>
+                <li class="email">Support: <span>support@builderprofessional.com</span></li>
+                <li class="email">Sales: <span>sales@builderprofessional.com</span></li>
+                <li class="web">Web: <span><a href="/sitemap.php">BuilderProfessional.com Site Map</a></span></li>
               </ul>
             </div>
           </div>
-          <div class="span3">
-            <div id="widget_flickr-2" class="widget widget_flickr"><h6 class="widget-title"><span>Recent Works</span></h6><div class="flickr_container"><script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=52617155@N08"></script></div></div>
+          <div class="span5">
+            <div class="widget ">
+              <h6 class="widget-title"><span>What's Happening?</span></h6>
+              <a class="twitter-timeline" data-tweet-limit="2" data-chrome="transparent noscrollbar nofooter"  href="https://twitter.com/wehelpbuilders" data-widget-id="633066756177707008">Tweets by @wehelpbuilders</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
           </div>
         </div>
       </div>
@@ -177,9 +183,9 @@
               Copyright 2015 Builder Professional Technology, LLC. All Right Reserved
               <div class="pull-right">
                 <ul class="footer_social_icons">
-                  <li class="linkedin"><a href="#"><span></span></a></li>
-                  <li class="twitter"><a href="#"><span></span></a></li>
-                  <li class="facebook"><a href="#"><span></span></a></li>
+                  <li class="linkedin"><a target="_blank" href="#"><span>&nbsp;</span></a></li>
+                  <li class="twitter"><a target="_blank" href="{{ config.twitter }}"><span>&nbsp;</span></a></li>
+                  <li class="facebook"><a target="_blank" href="#"><span>&nbsp;</span></a></li>
                 </ul>
               </div>
           </div>
@@ -188,5 +194,6 @@
     </div><!-- #copyright -->
   </footer><!-- #footer -->
 </div>
+
 </body>
 </html>

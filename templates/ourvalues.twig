@@ -1,0 +1,113 @@
+{% extends "base.twig" %}
+
+{% block main_content %}
+  {% include 'content_page_header.twig' with {
+  'pageTitle': 'Our Values',
+  'breadcrumbs': [
+  {'href': 'index.php', 'label': 'Home'},
+  {'href': 'contact.php', 'label': 'Our Company'},
+  {'href': 'ourvalues.php', 'label': 'Our Values'}
+  ]
+  } %}
+
+
+  <section id="content" class="page-dynamic_template-about2 sequentialchildren  section_last">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="row-fluid row-dynamic-el">
+          <div class="container">
+            <div class="row-fluid">
+
+              <div class="span4 services_small">
+
+                {% set peopleDescription %}
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                {% endset %}
+
+                {% include 'value.twig' with {
+                  'shortTitle': 'People Are More Important',
+                  'longTitle': 'People Are More Important Than Things',
+                  'description': peopleDescription
+                } %}
+
+                {% set sharingDescription %}
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                {% endset %}
+
+                {% include 'value.twig' with {
+                  'shortTitle': 'Sharing Information',
+                  'longTitle': 'Sharing Information Increases Effectiveness and Builds Confidence',
+                  'description': sharingDescription
+                } %}
+
+                {% set processDescription %}
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                {% endset %}
+
+                {% include 'value.twig' with {
+                  'shortTitle': 'Replicable Process',
+                  'longTitle': 'Building a Replicable Process Is More Important Than Any Individual Project',
+                  'description': processDescription
+                } %}
+
+                {% set userExperienceDescription %}
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                At Builder Professional, we value our relationships, our customers, our employees,
+                and our reputation. Our principles guide who we are and how we work with other people.
+                {% endset %}
+
+                {% include 'value.twig' with {
+                  'shortTitle': 'User Experience',
+                  'longTitle': "The Measure of a Quality Product Is in the User's Experience",
+                  'description': userExperienceDescription
+                } %}
+
+              </div>
+
+              <div class="span8">
+                <p class="content">At Builder Professional, we value our relationships, our customers, our employees,
+                  and our reputation. Our principles guide who we are and how we work with other people. </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
