@@ -18,9 +18,10 @@
           <div class="container">
             <div class="row-fluid">
 
-              <div class="span4 services_small">
+              <div class="span4 ourvalues">
 
                 {% set peopleDescription %}
+                <p class="content">
                 At Builder Professional, we value our relationships, our customers, our employees,
                 and our reputation. Our principles guide who we are and how we work with other people.
                 At Builder Professional, we value our relationships, our customers, our employees,
@@ -31,6 +32,7 @@
                 and our reputation. Our principles guide who we are and how we work with other people.
                 At Builder Professional, we value our relationships, our customers, our employees,
                 and our reputation. Our principles guide who we are and how we work with other people.
+                </p>
                 {% endset %}
 
                 {% include 'value.twig' with {
@@ -40,6 +42,7 @@
                 } %}
 
                 {% set sharingDescription %}
+                <p class="content">
                 At Builder Professional, we value our relationships, our customers, our employees,
                 and our reputation. Our principles guide who we are and how we work with other people.
                 At Builder Professional, we value our relationships, our customers, our employees,
@@ -50,6 +53,7 @@
                 and our reputation. Our principles guide who we are and how we work with other people.
                 At Builder Professional, we value our relationships, our customers, our employees,
                 and our reputation. Our principles guide who we are and how we work with other people.
+                </p>
                 {% endset %}
 
                 {% include 'value.twig' with {
@@ -59,6 +63,7 @@
                 } %}
 
                 {% set processDescription %}
+                <p class="content">
                 At Builder Professional, we value our relationships, our customers, our employees,
                 and our reputation. Our principles guide who we are and how we work with other people.
                 At Builder Professional, we value our relationships, our customers, our employees,
@@ -69,6 +74,7 @@
                 and our reputation. Our principles guide who we are and how we work with other people.
                 At Builder Professional, we value our relationships, our customers, our employees,
                 and our reputation. Our principles guide who we are and how we work with other people.
+                </p>
                 {% endset %}
 
                 {% include 'value.twig' with {
@@ -78,6 +84,7 @@
                 } %}
 
                 {% set userExperienceDescription %}
+                <p class="content">
                 At Builder Professional, we value our relationships, our customers, our employees,
                 and our reputation. Our principles guide who we are and how we work with other people.
                 At Builder Professional, we value our relationships, our customers, our employees,
@@ -88,6 +95,7 @@
                 and our reputation. Our principles guide who we are and how we work with other people.
                 At Builder Professional, we value our relationships, our customers, our employees,
                 and our reputation. Our principles guide who we are and how we work with other people.
+                </p>
                 {% endset %}
 
                 {% include 'value.twig' with {
@@ -98,9 +106,11 @@
 
               </div>
 
-              <div class="span8">
-                <p class="content">At Builder Professional, we value our relationships, our customers, our employees,
-                  and our reputation. Our principles guide who we are and how we work with other people. </p>
+              <div class="span8 value_detail" style="padding-left: 15px;">
+                <h1>People Are More Important Than Things</h1>
+                <div class="value_detail_description">
+                  {{ peopleDescription|raw }}
+                </div>
               </div>
 
             </div>

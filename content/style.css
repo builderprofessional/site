@@ -696,10 +696,10 @@
   .header_page{
     width: 100%;
     position: relative;
-    height: 80px;
+    height: 50px;
     float: left;
     margin-bottom: 25px;
-    background: #f4f4f4 url('img/header_.png') center no-repeat;
+    background: #f4f4f4 url('/images/pageheader.jpg') center no-repeat;
     border-bottom: 1px solid #ebebeb;
   }
 
@@ -722,19 +722,13 @@
 
 
   .header_page h4{
-
-    margin-top: 26px;
-
-    line-height: 27px; 
-
+    margin-top: 14px;
+    margin-left: 50px;
+    line-height: 27px;
     font-weight:500;
-
-    color:#444444;
-
+    color: white;
     text-transform: uppercase;
-
     float:left;
-
   }
 
   .header_5 .header_page{border-top:1px solid #e1e1e1}
@@ -3554,16 +3548,6 @@
       transition-duration: 0.4s;}
 
   .services_small dt span{width:40px; height:40px; float:left; -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}
-
-  .services_small dt span.circle{background:#313131; -webkit-transition-duration: 0.4s;
-
-      -moz-transition-duration: 0.4s;
-
-      -o-transition-duration: 0.4s;
-
-      -ms-transition-duration: 0.4s;
-
-      transition-duration: 0.4s;}
 
   .services_small dl{margin-bottom:0; margin-top:0}
 

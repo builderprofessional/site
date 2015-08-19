@@ -66,6 +66,11 @@
   <script type='text/javascript' src='content/js/jquery.livequery.js?ver=1'></script>
   <!-- JAVASCRIPTS -->
 
+  <!-- CUSTOM JAVASCRIPTS -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="/js/ourvalues.js"></script>
+  <!-- CUSTOM JAVASCRIPTS -->
+
   <style type="text/css" media="screen">
     .qtrans_flag span { display:none }
     .qtrans_flag { height:12px; width:18px; display:block }
@@ -93,9 +98,9 @@
             <div class="row-fluid social_row">
               <div class="span12">
                 <ul class="header_social_media_icons">
-                  <li class="linkedin"><a target="_blank" href="#"><span>&nbsp;</span></a></li>
+                  <li class="linkedin"><a target="_blank" href="{{ config.linkedin }}"><span>&nbsp;</span></a></li>
                   <li class="twitter"><a target="_blank" href="{{ config.twitter }}"><span>&nbsp;</span></a></li>
-                  <li class="facebook"><a target="_blank" href="#"><span>&nbsp;</span></a></li>
+                  <li class="facebook"><a target="_blank" href="{{ config.facebook }}"><span>&nbsp;</span></a></li>
                   {#<li class="youtube"><a href="#"><span>&nbsp;</span></a></li>#}
                 </ul>
               </div>
@@ -183,9 +188,9 @@
               Copyright 2015 Builder Professional Technology, LLC. All Right Reserved
               <div class="pull-right">
                 <ul class="footer_social_icons">
-                  <li class="linkedin"><a target="_blank" href="#"><span>&nbsp;</span></a></li>
+                  <li class="linkedin"><a target="_blank" href="{{ config.linkedin }}"><span>&nbsp;</span></a></li>
                   <li class="twitter"><a target="_blank" href="{{ config.twitter }}"><span>&nbsp;</span></a></li>
-                  <li class="facebook"><a target="_blank" href="#"><span>&nbsp;</span></a></li>
+                  <li class="facebook"><a target="_blank" href="{{ config.facebook }}"><span>&nbsp;</span></a></li>
                 </ul>
               </div>
           </div>

@@ -34,6 +34,112 @@
 .header_social_media_icons li.youtube:hover { background-position: -467px -4px; }
 
 
+
+/**********************************************************************************
+**** Our Values Page
+***********************************************************************************/
+
+.ourvalues .value_title {
+  width: 40px;
+  height: 40px;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -ms-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.ourvalues .value_title span {
+  height:40px;
+  float:left;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.ourvalues i {
+  text-align: center;
+  width: 100%;
+  line-height: 40px;
+  float: left;
+}
+
+.ourvalues .value_title span.circle i {
+  color: white;
+  width:40px;
+  font-size: 16px;
+}
+
+.ourvalues .value_title h4 {
+  padding-top: 5px;
+  width: 250px;
+  color: #3f4e7d;
+}
+
+.ourvalues .value_title span.circle{
+  background: #3f4e7d;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -ms-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.ourvalues .with_icon {
+  margin-left: 55px;
+}
+
+.ourvalues .value_wrapper {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.ourvalues p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+  width: 100%;
+}
+
+.value_circle_highlight {
+  background: #9a3c2f !important;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -ms-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.value_title_highlight {
+  color: #9a3c2f !important;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -ms-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.value_title_highlight a:link {
+  color: #9a3c2f !important;
+}
+
+.value_detail h1 {
+  color: #3f4e7d;
+}
+
+.ourvalues a.read_m{color:#999;  float:left; padding-top: 10px; }
+
+.ourvalues a.read_m span{float:left; color:#444;}
+
+.ourvalues a.read_m .direct_btn{margin-left:1px; margin-top:2px; background:none; border:none}
+
+.ourvalues a.read_m:hover .direct_btn{background:none; border:none}
+
+.ourvalues a.read_m .direct_btn i{color:#444; font-size:9px}
+
+.ourvalues a.read_m:hover .direct_btn i{}
+
+
 /**********************************************************************************
 **** Our Team Page
 ***********************************************************************************/

@@ -1,15 +1,21 @@
-<dl class="dl-horizontal">
-  <dt><span class="circle"><i class="moon-user icon"></i></span></dt>
-  <dd class="with_icon">
-    <h4 class="with_icon"><a href="#">{{ shortTitle }}</a></h4>
-  </dd>
-  <p class="content">{{ description|length > 130 ? description|slice(0, 130) ~ '...' : description }}</p>
+<div class="value_wrapper">
+  <div class="value_long_title" style="display: none">{{ longTitle }}</div>
+  <div class="value_description" style="display: none">{{ description|raw }}</div>
+  <div class="value_title">
+    <a href="javascript: void(0)" class="value_link">
+      <span class="circle"><i class="moon-user icon"></i></span>
+      <h4 class="with_icon">{{ shortTitle }}</h4>
+    </a>
+  </div>
+  <div class="value_summary">
+    <p class="content">{{ description|length > 130 ? description|slice(0, 130) ~ '...' : description }}</p>
+  </div>
+  <div class="value_read_more">
+    <a href="#" class="read_m" style="margin-top: -14px">
+      <span>Read More</span>
+      <span class="direct_btn"><i class="moon-arrow-right-2"></i></span>
+    </a>
+  </div>
+</div>
 
-  <a href="#" class="read_m" style="margin-top: -14px">
-    <span>Read More</span>
-    <span class="direct_btn"><i class="moon-arrow-right-2"></i></span>
-  </a>
-
-  <br style="clear: both" /><hr />
-</dl>
-<br />
+<br style="clear: both" /><hr /><br />
