@@ -12,6 +12,9 @@
     padding-top: 131px
 }
 
+.bp_dark_blue {
+    color: #3f4e7d;
+}
 
 /**********************************************************************************
 **** Social Media Header Icons
@@ -33,6 +36,16 @@
 .header_social_media_icons li.youtube { background-position: -467px -28px; }
 .header_social_media_icons li.youtube:hover { background-position: -467px -4px; }
 
+
+
+/**********************************************************************************
+**** Artisanal Site Page
+***********************************************************************************/
+
+.price_box ul li {
+  text-align: left;
+  padding-left: 30px;
+}
 
 
 /**********************************************************************************

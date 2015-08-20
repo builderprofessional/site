@@ -18,5 +18,14 @@ $(document).ready(function() {
       $(this).find('h1').html(wrapper.find('.value_long_title').html());
       $(this).find('.value_detail_description').html(wrapper.find('.value_description').html());
     }).fadeIn();
+
+    var valueDetailTop = $('.value_detail').offset().top;
+
+    if (valueDetailTop > 350)
+    {
+      $(document.body).animate({
+        'scrollTop': valueDetailTop - 40
+      }, 1000);
+    }
   });
 });

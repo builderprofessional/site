@@ -1,5 +1,82 @@
 {% extends "base.twig" %}
 
 {% block main_content %}
-  Something about artisanal sites
+  {% include 'content_page_header.twig' with {
+    'pageTitle': 'The Artisanal Site',
+    'breadcrumbs': [
+      {'href': 'index.php', 'label': 'Home'},
+      {'href': 'artisanal.php', 'label': 'The Artisanal Site'},
+    ]
+  } %}
+
+
+  <section id="content" class="page-dynamic_template-about2 sequentialchildren  section_last">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="row-fluid row-dynamic-el">
+          <div class="container">
+            <div class="row-fluid">
+
+              <div class="span8">
+                <h2 class="bp_dark_blue">Discover the Higher Standard in Web Sites</h2>
+                <p class="important_text">At Builder Professional, we know what a website means to you and your business. Your
+                  website projects your work to the public, markets your brand, and showcases your craftsmanship. Those
+                  are all important, but many times your website will also be your first impression, the one you can
+                  never take back.</p>
+
+                <p class="important_text">A Builder Professional Artisanal Site is designed specifically for your business to
+                  ensure that every first impression is the lasting impression that turns every potential customer into
+                  a convert. It's not just a one-time build and then you're on your own to manage a website, it's a
+                  relationship that puts our expertise to work for you on a continuing basis.</p>
+
+                <p class="important_text">You pay a minimal setup fee of $500 for your whole website. There are no add on
+                  prices for additional modules or pages. All required programming and pages are included. Once we have
+                  your initial graphics done, you pay $150 per month as long as you want to stay with us. We're betting
+                  you're going to stay with us a very long time.</p>
+
+                <p class="important_text">When you build a new home and want to show off your latest and greatest, just get
+                  us the photos. We'll get them sized, oriented, and beautifully placed into your site. When you have
+                  a great customer testimonial, just get it to us, we'll get it featured to show off the great work
+                  you are doing. When you forge a great new partnership, just let us know the details and we'll get
+                  a write up and links to make the most out of your relationships. And we do all this making sure that
+                  your website never looks out of date, never looks rushed, and never looks anything but first class.
+                  Plus, all of this is 100% included in your fee, you are never up-sold or charged extra. For your
+                  Artisanal Site, nothing but the best is good enough for you, and nothing but the best is good
+                  enough for us either.</p>
+
+                <p class="important_text">I believe your business deserves an Artisanal Site that projects what you and your
+                  business are capable of, and I can't wait to make sure your business gets one.</p>
+
+                <p class="ceo_signature" style="padding-left: 40px">-- Tony Vance, CEO Builder Professional</p>
+              </div>
+
+              <div class="span4">
+                <div class="price_container">
+                  <div class="price_box">
+                    <div class="title">All-Inclusive Cost</div>
+                    <div class="price">$500 <span class="period">setup fee</span></div>
+                    <div class="price">$150 <span class="period">monthly on go-live</span></div>
+                  </div>
+                </div>
+
+                <div class="price_container">
+                  <div class="price_box">
+                    <div class="title">Features</div>
+                    <ul>
+                      <li>Web and Email Hosting Included</li>
+                      <li>Fee is all-inclusive</li>
+                      <li>SEO Tools</li>
+                      <li>Ongoing content management and updates</li>
+                      <li>Community Locator</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock %}

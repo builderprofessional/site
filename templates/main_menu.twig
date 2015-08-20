@@ -1,7 +1,14 @@
 <nav>
   <ul id="menu-menu" class="menu">
     {% include "main_menu_item.twig" with {'href': 'index.php', 'label': 'Home'} %}
-    {% include "main_menu_item.twig" with {'href': 'artisanal.php', 'label': 'Artisanal Site'} %}
+    {% include "main_menu_item.twig" with {
+      'href': 'artisanal.php',
+      'label': 'Artisanal Site',
+      'submenu': [
+        {'href': 'artisanal.php', 'label': 'Overview'},
+        {'href': 'website_portfolio.php', 'label': 'Our Portfolio'},
+      ]
+    } %}
     {% include "main_menu_item.twig" with {'href': 'software.php', 'label': 'Estimating / Accounting Software'} %}
     {% include "main_menu_item.twig" with {'href': 'training.php', 'label': 'Training'} %}
     {% include "main_menu_item.twig" with {
