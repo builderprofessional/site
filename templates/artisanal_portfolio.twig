@@ -1,0 +1,46 @@
+{% extends "base.twig" %}
+
+{% block main_content %}
+  {% include 'content_page_header.twig' with {
+    'pageTitle': 'Our Website Portfolio',
+    'breadcrumbs': [
+      {'href': 'index.php', 'label': 'Home'},
+      {'href': 'artisanal_portfolio.php', 'label': 'Our Website Portfolio'}
+    ]
+  } %}
+
+  <section id="content" class="content_portfolio layout-fullsize">
+    <div class="container">
+      <div class="row fluid">
+        <section id="portfolio-preview-items" class="two-cols span12">
+          <div class="row filterable">
+
+            {% include 'artisanal_portfolio_site.twig' with {
+              'url': 'http://www.eliteirondoors.com/',
+              'customer': 'Elite Iron Doors',
+              'thumbnail': 'eliteirondoors.jpg'
+            } %}
+
+            {% include 'artisanal_portfolio_site.twig' with {
+              'url': 'http://troydavishomes.com/',
+              'customer': 'Troy Davis Homes',
+              'thumbnail': 'troydavishomes.jpg'
+            } %}
+
+            {% include 'artisanal_portfolio_site.twig' with {
+              'url': 'http://ichroofing.com/',
+              'customer': 'ICH Roofing',
+              'thumbnail': 'ichroofing.jpg'
+            } %}
+
+            {% include 'artisanal_portfolio_site.twig' with {
+              'url': 'http://arlingtonpavers.com/',
+              'customer': 'Arlington Pavers',
+              'thumbnail': 'arlingtonpavers.jpg'
+            } %}
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+{% endblock %}
