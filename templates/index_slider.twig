@@ -1,0 +1,183 @@
+<span class="slider-img"></span>
+<section id="slider-fullwidth" class="slider">
+  <script type="text/javascript"
+          src="content/plugins/LayerSlider/js/layerslider.kreaturamedia.jquery.js?ver=4.0.1"></script>
+  <script type="text/javascript" src="content/plugins/LayerSlider/js/jquery-easing-1.3.js?ver=1.3.0"></script>
+  <script type="text/javascript" src="content/plugins/LayerSlider/js/jquerytransit.js?ver=0.9.9"></script>
+  <script type="text/javascript">
+    var lsjQuery = jQuery.noConflict();
+    lsjQuery(document).ready(function () {
+      if (typeof lsjQuery.fn.layerSlider == "undefined") {
+        lsShowNotice('jquery');
+      }
+      else if (typeof jQuery.transit == "undefined" || typeof jQuery.transit.modifiedForLayerSlider == "undefined") {
+        lsShowNotice('transit');
+      }
+      else {
+        lsjQuery("#layerslider_6").layerSlider({
+          width: '100%',
+          height: '460px',
+          responsive: true,
+          responsiveUnder: 940,
+          sublayerContainer: 940,
+          autoStart: true,
+          pauseOnHover: true,
+          firstLayer: 1,
+          animateFirstLayer: true,
+          randomSlideshow: false,
+          twoWaySlideshow: true,
+          loops: 0,
+          forceLoopNum: true,
+          autoPlayVideos: true,
+          autoPauseSlideshow: 'auto',
+          youtubePreview: 'maxresdefault.jpg',
+          keybNav: true,
+          touchNav: true,
+          skin: 'defaultskin',
+          skinsPath: 'content/plugins/LayerSlider/skins/',
+          globalBGColor: '#efefef',
+          navPrevNext: true,
+          navStartStop: false,
+          navButtons: false,
+          hoverPrevNext: true,
+          hoverBottomNav: false,
+          thumbnailNavigation: 'disabled',
+          tnWidth: 100,
+          tnHeight: 60,
+          tnContainerWidth: '60%',
+          tnActiveOpacity: 35,
+          tnInactiveOpacity: 100,
+          imgPreload: true,
+          yourLogo: false,
+          yourLogoStyle: 'left: 10px; top: 10px;',
+          yourLogoLink: false,
+          yourLogoTarget: '_self',
+          cbInit: function (element) {
+          },
+          cbStart: function (data) {
+          },
+          cbStop: function (data) {
+          },
+          cbPause: function (data) {
+          },
+          cbAnimStart: function (data) {
+          },
+          cbAnimStop: function (data) {
+          },
+          cbPrev: function (data) {
+          },
+          cbNext: function (data) {
+          }
+        });
+      }
+    });
+  </script>
+  <!-- Layer Slider -->
+
+  <div id="layerslider_6" class="ls-wp-container" style="width: 100%; height: 460px; margin: 0px auto; ">
+
+    {% include 'index_slide.twig' with {
+      'slideDirection': 'right',
+      'slideDelay': '4000',
+      'additionalClasses': 'slide1',
+      'steps': [
+        {
+          'type': 'image',
+          'src': '/images/slider/slide1.jpg',
+          'style': 'position: absolute; top: -23px; left: -1031px; slidedirection: fade; slideoutdirection: fade;  durationin: 1500; durationout: 1500; easingin: easeInOutQuint; easingout: easeInOutQuint; delayin: 0; delayout: 0; showuntil: 0;'
+        },
+        {
+          'type': 'header',
+          'headerElement': 'h2',
+          'style': 'position: absolute; top:136px; left: -222px; slidedirection : left; slideoutdirection : fade; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 500; delayout : 0; showuntil : 0; padding:7px 10px; color: #fff;  white-space: nowrap;',
+          'text': 'Builders Software Enterprises is now '
+        },
+        {
+          'type': 'header',
+          'headerElement': 'h1',
+          'style': 'position: absolute; top:166px; left: -202px; slidedirection : left; slideoutdirection : fade; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 500; delayout : 0; showuntil : 0; padding:7px 10px; color: #fff;  white-space: nowrap;',
+          'text': 'Builder Professional'
+        },
+      ]
+    } %}
+
+    {% include 'index_slide.twig' with {
+      'slideDirection': 'bottom',
+      'slideDelay': '11500',
+      'steps': [
+        {
+          'type': 'image',
+          'src': '/images/slider/slide2.jpg',
+          'style': 'position: absolute; top: -23px; left: -1031px; slidedirection: fade; slideoutdirection: fade;  durationin: 1500; durationout: 1500; easingin: easeInOutQuint; easingout: easeInOutQuint; delayin: 0; delayout: 0; showuntil: 0;'
+        },
+        {
+          'type': 'header',
+          'headerElement': 'h2',
+          'style': 'position: absolute; top:136px; left: -202px; slidedirection : left; slideoutdirection : fade; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 500; delayout : 0; showuntil : 0; padding:7px 10px; color: #fff;  white-space: nowrap;',
+          'text': 'Beautiful, Strong, Effective'
+        },
+        {
+          'type': 'header',
+          'headerElement': 'h2',
+          'style': 'position: absolute; top:176px; left: -202px; slidedirection : left; slideoutdirection : fade; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 2500; delayout : 0; showuntil : 0; padding:7px 10px; color: #fff;  white-space: nowrap;',
+          'text': 'Making Quality Accessible'
+        },
+        {
+          'type': 'header',
+          'headerElement': 'h2',
+          'style': 'position: absolute; top:216px; left: -202px; slidedirection : left; slideoutdirection : fade; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 4500; delayout : 0; showuntil : 0; padding:7px 10px; color: #fff;  white-space: nowrap;',
+          'text': 'The First Impression that Stands Out'
+        },
+        {
+          'type': 'header',
+          'headerElement': 'h1',
+          'style': 'position: absolute; top:286px; left: -262px; slidedirection : fade; slideoutdirection : fade; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 8500; delayout : 0; showuntil : 0; padding:7px 10px; color: #fff;  white-space: nowrap;',
+          'text': 'The Builder Professional Artisanal Site'
+        }
+      ]
+    } %}
+
+    {% include 'index_slide.twig' with {
+      'slideDirection': 'left',
+      'slideDelay': '8000',
+      'steps': [
+        {
+          'type': 'image',
+          'src': '/images/slider/slide3.jpg',
+          'style': 'position: absolute; top: -23px; left: -1031px; slidedirection: fade; slideoutdirection: fade;  durationin: 1500; durationout: 1500; easingin: easeInOutQuint; easingout: easeInOutQuint; delayin: 0; delayout: 0; showuntil: 0;'
+        },
+        {
+          'type': 'header',
+          'headerElement': 'h1',
+          'style': 'position: absolute; top:136px; left: 302px; slidedirection : left; slideoutdirection : fade; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0; showuntil : 0; padding:7px 10px; color: #fff;  white-space: nowrap;',
+          'text': 'Builders Know They Can Come to Us for'
+        },
+        {
+          'type': 'header',
+          'headerElement': 'h2',
+          'style': 'position: absolute; top:196px; left: 322px; slidedirection : left; slideoutdirection : fade; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 2500; delayout : 0; showuntil : 0; padding:7px 10px; color: #fff;  white-space: nowrap;',
+          'text': '1) Beautiful Custom Websites with The Artisanal Site'
+        },
+        {
+          'type': 'header',
+          'headerElement': 'h2',
+          'style': 'position: absolute; top:221px; left: 322px; slidedirection : left; slideoutdirection : fade; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 3500; delayout : 0; showuntil : 0; padding:7px 10px; color: #fff;  white-space: nowrap;',
+          'text': '2) Estimating and Accounting Software Solutions'
+        },
+        {
+          'type': 'header',
+          'headerElement': 'h2',
+          'style': 'position: absolute; top:246px; left: 322px; slidedirection : left; slideoutdirection : fade; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 4500; delayout : 0; showuntil : 0; padding:7px 10px; color: #fff;  white-space: nowrap;',
+          'text': '3) Training to Push Your Business to the Next Level'
+        },
+        {
+          'type': 'header',
+          'headerElement': 'h2',
+          'style': 'position: absolute; top:271px; left: 322px; slidedirection : left; slideoutdirection : fade; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 5500; delayout : 0; showuntil : 0; padding:7px 10px; color: #fff;  white-space: nowrap;',
+          'text': '4) Photography and Panoramas'
+        },
+      ]
+    } %}
+  </div>
+  <!-- End Layer Slider -->
+</section>

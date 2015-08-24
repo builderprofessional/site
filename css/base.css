@@ -16,6 +16,10 @@
     color: #3f4e7d;
 }
 
+.bp_deep_red {
+    color: #9a3c2f;
+}
+
 /**********************************************************************************
 **** Social Media Header Icons
 ***********************************************************************************/
@@ -36,6 +40,54 @@
 .header_social_media_icons li.youtube { background-position: -467px -28px; }
 .header_social_media_icons li.youtube:hover { background-position: -467px -4px; }
 
+
+
+/**********************************************************************************
+**** Home Page
+***********************************************************************************/
+
+.index_main_quote {
+  font-weight: 500;
+  color: #3f4e7d;
+  margin-top: 3px;
+  float: left;
+  width: 100%;
+}
+
+.index_main_quote_highlight {
+  color: #9a3c2f;
+  font-size: inherit;
+}
+
+.support_row {
+  background-image:url('content/images/all/07/parallex2.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-attachment: fixed;
+}
+
+
+/**********************************************************************************
+**** Home Page Slider
+***********************************************************************************/
+
+.index_slider_layer {
+  slidedelay: 4000;
+  duration: 1500;
+  durationout: 1500;
+  easingin: easeInOutQunit;
+  easingout: easeInOutQuint;
+  delayin: 0;
+}
+
+.slide1 h2, .slide2 h2 {
+  font-size: 4em;
+}
+
+.slide2 h1 {
+  font-size: 6em;
+  font-weight: bold;
+}
 
 
 /**********************************************************************************

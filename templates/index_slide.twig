@@ -1,0 +1,9 @@
+<div class="ls-layer" style="slidedirection: {{ slideDirection }}; slideDelay: {{ slideDelay }}" class="index_slider_layer {{ additionalClasses }}">
+  {% for step in steps %}
+    {% if step.type == 'image' %}
+      <img alt="img" class="ls-s-1" src="{{ step.src }}" style="{{ step.style }}">
+    {% elseif step.type == 'header' %}
+      <{{ step.headerElement }} class="ls-s-1" style="{{ step.style }}">{{ step.text|raw }}</{{ step.headerElement }}>
+    {% endif %}
+  {% endfor %}
+</div>

@@ -9045,7 +9045,7 @@ aside .accordion-inner {
 /* Headers */
 
 body.header_2 .top_nav {
-    background: url(/images/topbar_bg.png) repeat-x;
+    background: #3f4e7d;
     color: #fbfbfb;
     border-bottom: 1px solid #e1e1e1;
 }
