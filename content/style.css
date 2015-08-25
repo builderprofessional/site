@@ -3038,7 +3038,7 @@ a {
 
     padding: 9px;
 
-    font-family: Roboto !important;
+    font-family: ProximaNova !important;
 
     visibility: hidden;
 
@@ -10344,13 +10344,13 @@ body {
 }
 
 input, button, select, textarea, body, span, aside .widget_twitter li, aside ul li a {
-    font-family: Roboto;
-    font-size: 12px;
-    color: #999999
+    font-family: ProximaNova;
+    font-size: 14px;
+    color: #3f4e7d
 }
 
 h1, h2, h3, h4, h5, h6, .flex-caption, nav .menu li a, #portfolio-filter ul li a, #faq-filter ul li a, .blog-article dl .blog-content .readmore, .row-dynamic-el .header .header_link, .accordion .accordion-heading a, .single_testimonial span.title, .recent_news .news-article.style_2 dt span, .one-staff .content span, .btn-system span, #respond input[type="submit"], .row-google-map .desc, .side-nav li a, .price_box, .standard-form .more-large, .comment span.author {
-    font-family: Roboto
+    font-family: ProximaNova
 }
 
 header#header {

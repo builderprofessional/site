@@ -20,6 +20,11 @@
     color: #9a3c2f;
 }
 
+@font-face {
+  font-family: ProximaNova;
+  src: url('/fonts/ProximaNovaRegular.otf');
+}
+
 /**********************************************************************************
 **** Social Media Header Icons
 ***********************************************************************************/
@@ -215,4 +220,8 @@
   display:inline-block;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+.team_image_border {
+  border: solid #9a3c2f 3px;
 }
