@@ -94,6 +94,12 @@
   font-weight: bold;
 }
 
+@media only screen and (max-width: 1600px) {
+    .ls-mobile-hack {
+        display: none !important;
+    }
+}
+
 
 /**********************************************************************************
 **** Artisanal Site Page
