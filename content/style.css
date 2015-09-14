@@ -4388,7 +4388,7 @@ footer .widget_recent_posts dd {
 
     height: 40px;
 
-    background: #eee;
+    background: #3f4e7d;
 
     border-radius: 50%;
 
@@ -4409,7 +4409,7 @@ footer .widget_recent_posts dd {
 }
 
 .header dt i {
-    color: #444;
+    color: #fff;
     font-size: 16px;
     width: 100%;
     float: left;
@@ -10414,7 +10414,11 @@ nav li li.current-menu-item a {
     color: #009dcd !important
 }
 
-.services_small dt span.circle:hover, .header dt:hover, .services_steps .first_desc, .news-article a.read_m:hover .direct_btn, .recent_news .news-article.style_2 dt .dt, .row-fluid .pagination a:hover, .blog-article dt .dt, .tpl2 .center-bar a.link, .tpl2 .center-bar a.lightbox, .textbar .text-icon:hover, .btn-system.all_, .services_creative .icon_wrapper, .skill .prog, .accordion .accordion-heading.in_head:before, #respond input[type="submit"], .contact_form .custom_btn, .slider_bg_cl, .contact_form .custom_btn {
+.contact_form .custom_btn, .header dt:hover {
+  background: #3f4e7d;
+}
+
+.services_small dt span.circle:hover, .services_steps .first_desc, .news-article a.read_m:hover .direct_btn, .recent_news .news-article.style_2 dt .dt, .row-fluid .pagination a:hover, .blog-article dt .dt, .tpl2 .center-bar a.link, .tpl2 .center-bar a.lightbox, .textbar .text-icon:hover, .btn-system.all_, .services_creative .icon_wrapper, .skill .prog, .accordion .accordion-heading.in_head:before, #respond input[type="submit"], .slider_bg_cl {
     background: #009dcd;
 }
 

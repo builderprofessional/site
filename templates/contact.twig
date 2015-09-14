@@ -1,5 +1,99 @@
 {% extends "base.twig" %}
 
 {% block main_content %}
-  Contact us
+
+  {% include 'content_page_header.twig' with {
+  'pageTitle': 'Contact Us',
+  'breadcrumbs': [
+  {'href': 'contact.php', 'label': 'Contact Us'}
+  ]
+  } %}
+
+  <section id="content" class="page-dynamic_template-contactpa sequentialchildren section_first ">
+    <div class="row-fluid">
+      <div class="span12">
+
+        <div class="row-fluid row-dynamic-el " style="">
+
+          <div class="container">
+
+            <div class="row-fluid">
+
+              <div class="span7 contact_form">
+                <div class="header">
+                  <dl class="dl-horizontal">
+                    <dt><i class="moon-pen-5"></i></dt>
+                    <dd style="margin-left:55px !important; margin-top:10px;">
+                      <h4>Let Us Know What You Are Thinking</h4>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="row-fluid">
+                  <div class="row-fluid">
+
+                    <div class="span12">
+                      <form name="contactForm" class="standard-form row-fluid"
+                            action="contact_form.php" method="post">
+                        <input class="span6" name="name" placeholder="Name" type="text"
+                               id="themeple_name" value=""/>
+                        <input class="span6" name="e-mail" placeholder="E-Mail" type="text"
+                               id="themeple_e-mail" value=""/>
+                        <input class="span6" name="subject" placeholder="Subject" type="text"
+                               id="themeple_subject" value=""/>
+                                                <textarea class="span12" placeholder="Content" name="themeple_content"
+                                                          cols="40" rows="7" id="themeple_content"></textarea>
+
+                        <p class="perspective"><input type="submit" value="Send Message"
+                                                      class="custom_btn"/></p></form>
+                      <div id="ajaxresponse"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="span5 post_page_cont">
+                <div class="header">
+                  <dl class="dl-horizontal">
+                    <dt><i class="moon-file-2"></i></dt>
+                    <dd class="" style="margin-left:55px !important; margin-top:10px;">
+                      <h4>Get in Touch</h4>
+                      <br/>
+
+                      <ul class="contact_list">
+                        {% for contactMethod in config.contactMethods %}
+                          <li>{{ contactMethod.label }}
+                            <span>{{ contactMethod.value }}</span></li>
+                        {% endfor %}
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="header">
+                  <dl class="dl-horizontal">
+                    <dt><i class="moon-people"></i></dt>
+                    <dd class="" style="margin-left:55px !important; margin-top:10px;">
+                      <h4>Connect on Social Media</h4>
+                      <br/>
+
+                      <ul class="contact_list">
+                        <li class="linkedin"><a target="_blank" href="{{ config.linkedin }}">LinkedIn</a></li>
+                        <li class="twitter"><a target="_blank" href="{{ config.twitter }}">Twitter</a></li>
+                        <li class="facebook"><a target="_blank" href="{{ config.facebook }}">Facebook</a></li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <p></p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 {% endblock %}

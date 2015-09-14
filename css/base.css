@@ -231,3 +231,50 @@
 .team_image_border {
   border: solid #9a3c2f 3px;
 }
+
+
+
+/**********************************************************************************
+**** Contact Us Page
+***********************************************************************************/
+
+.contact_list {
+  margin-top: 30px;
+  padding-left: 0px;
+  margin-left: -40px;
+}
+
+.contact_list li {
+  padding-left: 25px;
+  list-style: none;
+}
+
+.contact_list li.email {
+  background: url('/content/img/mail_red.png') left center no-repeat;
+}
+
+.contact_list li.address {
+  background: url('/content/img/address_red.png') left center no-repeat;
+}
+
+.contact_list li.phone {
+  background: url('/content/img/phone_red.png') left center no-repeat;
+}
+
+.contact_social_media_icons {
+  list-style-type: none;
+  margin-top: 30px;
+  padding-left: 0px;
+  margin-left: -40px;
+}
+
+.contact_social_media_icons li .icon {
+  width: 20px;
+  height: 20px;
+  background: url('/content/img/social_icons_red.png') left center no-repeat;
+}
+
+.contact_social_media_icons li.twitter .icon { background-position: -134px -14px; }
+.contact_social_media_icons li.linkedin .icon { background-position: -33px -14px; }
+.contact_social_media_icons li.facebook .icon { background-position: -161px -14px; }
+.contact_social_media_icons li.youtube .icon { background-position: -467px -14px; }
