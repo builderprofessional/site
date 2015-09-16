@@ -3,10 +3,10 @@
 {% block main_content %}
 
   {% include 'content_page_header.twig' with {
-  'pageTitle': 'Contact Us',
-  'breadcrumbs': [
-  {'href': 'contact.php', 'label': 'Contact Us'}
-  ]
+    'pageTitle': 'Contact Us',
+    'breadcrumbs': [
+      {'href': 'contact.php', 'label': 'Contact Us'}
+    ]
   } %}
 
   <section id="content" class="page-dynamic_template-contactpa sequentialchildren section_first ">
@@ -14,6 +14,10 @@
       <div class="span12">
 
         <div class="row-fluid row-dynamic-el " style="">
+
+          <div style="text-align: center">
+            <span class="{{ extra.successAlertClass }} alert alert-grey"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> Thanks for contacting us!</span>
+          </div>
 
           <div class="container">
 
@@ -32,20 +36,16 @@
                   <div class="row-fluid">
 
                     <div class="span12">
-                      <form name="contactForm" class="standard-form row-fluid"
-                            action="contact_form.php" method="post">
-                        <input class="span6" name="name" placeholder="Name" type="text"
-                               id="themeple_name" value=""/>
-                        <input class="span6" name="e-mail" placeholder="E-Mail" type="text"
-                               id="themeple_e-mail" value=""/>
-                        <input class="span6" name="subject" placeholder="Subject" type="text"
-                               id="themeple_subject" value=""/>
-                                                <textarea class="span12" placeholder="Content" name="themeple_content"
-                                                          cols="40" rows="7" id="themeple_content"></textarea>
+                      <form action="processcontact.php" name="contactForm" id="contactForm" class="standard-form row-fluid" action="contact_form.php" method="post">
 
-                        <p class="perspective"><input type="submit" value="Send Message"
-                                                      class="custom_btn"/></p></form>
-                      <div id="ajaxresponse"></div>
+                        <input class="span6 contact_form_name" name="name" placeholder="Name (required)" type="text" id="themeple_name" value=""/>
+                        <input class="span6 contact_form_email" name="email" placeholder="E-Mail (required)" type="text" id="themeple_e-mail" value=""/>
+                        <input class="span6 contact_form_subject" name="subject" placeholder="Subject (required)" type="text" id="themeple_subject" value=""/>
+                        <textarea class="span12 contact_form_content" placeholder="Content (required)" name="themeple_content" cols="40" rows="7" id="themeple_content"></textarea>
+
+                        <input type="hidden" name="token" value="1123581321" />
+                        <p class="perspective"><input type="submit" value="Send Message" class="custom_btn"/> <span class="contact_form_error_message hiddenaway bp_deep_red">Please complete all required fields.</span></p></form>
+                        <div id="ajaxresponse"></div>
                     </div>
                   </div>
                 </div>

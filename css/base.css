@@ -25,6 +25,11 @@
   src: url('/fonts/ProximaNovaRegular.otf');
 }
 
+.hiddenaway {
+  display: none;
+}
+
+
 /**********************************************************************************
 **** Social Media Header Icons
 ***********************************************************************************/
@@ -237,6 +242,22 @@
 /**********************************************************************************
 **** Contact Us Page
 ***********************************************************************************/
+
+.contact_error_field::-webkit-input-placeholder {
+  color: #9a3c2f;
+}
+
+.contact_error_field:-moz-placeholder {
+  color: #9a3c2f;
+}
+
+.contact_error_field::-moz-placeholder {
+  color: #9a3c2f;
+}
+
+.contact_error_field:-ms-input-placeholder {
+  color: #9a3c2f;
+}
 
 .contact_list {
   margin-top: 30px;

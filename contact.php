@@ -1,3 +1,5 @@
 <?php
 require_once('setup.php');
-start_page('contact.twig');
+
+$successAlertClass = $_REQUEST['success'] ? '' : 'hiddenaway';
+start_page('contact.twig', ['successAlertClass' => $successAlertClass]);
