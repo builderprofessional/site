@@ -17,10 +17,42 @@
       <div class="row-fluid row-dynamic-el"><div class="container"><div class="row-fluid">
 
         {% include 'team_member.twig' with {
+          'name': 'Brent Harbolt',
+          'title': 'Customer Service Manager',
+          'email': 'brent.harbolt@builderprofessional.com',
+          'phone': '(916) WE-BUILD / (916) 932-8453',
+          'image': '/images/team/brent.jpg',
+          'collg': 6,
+          'colmd': 6,
+
+          'description': "Brent Harbolt has worked in customer service with Builder Software Enterprises since 2000. He is a passionate advocate for our customers and their needs."
+        } %}
+
+        {% include 'team_member.twig' with {
+          'name': 'Chip Joslin',
+          'title': 'Director of Sales',
+          'email': 'chip.joslin@builderprofessional.com',
+          'phone': '(916) WE-BUILD / (916) 932-8453',
+          'image': '/images/team/chip.jpg',
+          'collg': 6,
+          'colmd': 6,
+
+          'twitter': config.twitter,
+          'linkedin': config.linkedin,
+
+          'description': "Chip Joslin has worked in a variety of industries from Legal and Entertainment to Software Development and New Home Construction.  He has both owned and consulted for dozens of businesses throughout his career.  He’s also very proud to have had the privilege of selling and managing accounts with Rick Powell of Builders Software Enterprises dating back to the late 1990’s."
+        } %}
+
+      </div></div></div>
+      <div class="row-fluid row-dynamic-el"><div class="container"><div class="row-fluid">
+
+        {% include 'team_member.twig' with {
           'name': 'Tony Vance',
           'title': 'CEO',
           'email': 'tony.vance@builderprofessional.com',
           'image': '/images/team/tony.jpg',
+          'collg': 4,
+          'colmd': 4,
 
           'twitter': 'https://twitter.com/TonyVance3ES',
           'linkedin': 'https://www.linkedin.com/in/anthonytvance',
@@ -28,21 +60,15 @@
           'description': "Tony Vance has worked in software development and management for more than 15 years. He first worked for Builders Software Enterprises in 1999 and built the last three versions of the BSE Estimator."
         } %}
 
-        {% include 'team_member.twig' with {
-          'name': 'Brent Harbolt',
-          'title': 'Customer Service Manager',
-          'email': 'brent.harbolt@builderprofessional.com',
-          'phone': '(916) WE-BUILD / (916) 932-8453',
-          'image': '/images/team/brent.jpg',
 
-          'description': "Brent Harbolt has worked in customer service with Builder Software Enterprises since 2000. He is a passionate advocate for our customers and their needs."
-        } %}
 
         {% include 'team_member.twig' with {
           'name': 'Robert Flach',
           'title': 'Director of IT',
           'email': 'robert.flach@builderprofessional.com',
           'image': '/images/team/robert.jpg',
+          'collg': 4,
+          'colmd': 4,
 
           'linkedin': 'https://www.linkedin.com/in/robertflach',
           'twitter': 'https://twitter.com/allauthors',
@@ -55,6 +81,8 @@
           'title': 'Artistic Director',
           'email': 'andrew.kocher@builderprofessional.com',
           'image': '/images/team/andrew.jpg',
+          'collg': 4,
+          'colmd': 4,
 
           'linkedin': 'https://www.linkedin.com/in/andrewkocher',
 
