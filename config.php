@@ -15,7 +15,7 @@ $config['contactMethods'] = [
     [
         'cssClass' => 'phone',
         'label' => 'Phone: ',
-        'value' => '(916) WE-BUILD / (916) 932-8453',
+        'value' => '(844) 63-BUILD / (844) 632-8453',
     ],
     [
         'cssClass' => 'email',
