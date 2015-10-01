@@ -117,6 +117,75 @@
 
 
 /**********************************************************************************
+**** Training Schedule Page
+***********************************************************************************/
+
+/*.scheduled_class .date {*/
+  /*color: #fff;*/
+  /*width: 54px;*/
+  /*font-size: 20px;*/
+  /*margin-top: 5px;*/
+  /*font-weight: bold;*/
+  /*background-color: #000;*/
+/*}*/
+
+/*.scheduled_class .month {*/
+  /*line-height: 13px;*/
+  /*margin-top: 2px;*/
+  /*color: #fff;*/
+  /*text-transform: uppercase;*/
+/*}*/
+
+/*.scheduled_class .year {*/
+  /*line-height: 13px;*/
+/*}*/
+
+/*.scheduled_class span {*/
+  /*float: left;*/
+  /*width: 100%;*/
+  /*color: #fff;*/
+  /*text-align: center;*/
+  /*font-weight: 500;*/
+  /*font-size: 12px;*/
+/*}*/
+
+/*.scheduled_class_date {*/
+  /*background-color: #009dcd;*/
+/*}*/
+
+/*.scheduled_class .icon_ {*/
+  /*width: 48px;*/
+  /*height: 40px;*/
+  /*-webkit-border-radius: 6px;*/
+  /*-moz-border-radius: 6px;*/
+  /*border-radius: 6px;*/
+  /*background: #f3f3f3;*/
+  /*border: 1px solid #d8d8d8;*/
+  /*z-index: 1;*/
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*-webkit-transition-duration: 0.4s;*/
+  /*-moz-transition-duration: 0.4s;*/
+  /*-o-transition-duration: 0.4s;*/
+  /*-ms-transition-duration: 0.4s;*/
+  /*transition-duration: 0.4s;*/
+/*}*/
+
+/*.scheduled_class .icon_ i {*/
+  /*float: left;*/
+  /*width: 100%;*/
+  /*text-align: center;*/
+  /*line-height: 52px;*/
+  /*font-size: 16px;*/
+/*}*/
+
+/*.scheduled_class:hover .icon_ {*/
+  /*top: 48px;*/
+  /*z-index: 1;*/
+/*}*/
+
+/**********************************************************************************
 **** Our Values Page
 ***********************************************************************************/
 

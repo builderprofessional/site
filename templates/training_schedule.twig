@@ -1,0 +1,65 @@
+{% extends "base.twig" %}
+
+{% block main_content %}
+  {% include 'content_page_header.twig' with {
+    'pageTitle': 'Sign Up for a Training Class',
+    'breadcrumbs': [
+      {'href': 'index.php', 'label': 'Home'},
+      {'href': 'training.php', 'label': 'Training'},
+      {'href': 'training_schedule.php', 'label': 'Schedule'}
+    ]
+  } %}
+
+
+  <section id="content">
+    <div class="row-fluid">
+      <div class="span12">
+
+        {% for class in extra.classes %}
+
+        <div class="row-fluid row-dynamic-el"><div class="container">
+            <div class="row-fluid span12" style="background-color: #3f4e7d; padding-left: 25px; padding-top: 5px;">
+              <div class="row-fluid">
+                <span class="span4">
+                  <h3 style="color: white">{{ class.name }}</h3>
+                </span>
+                <span class="span4">
+                  <h4 style="color: white">{{ class.start|date('D m/d g:i a') }} - {{ class.end|date('D m/d g:i a') }}</h4>
+                </span>
+                <span class="span4">
+                  <h3 style="color: white">Online via GoToMeeting</h3>
+                </span>
+              </div>
+            </div>
+            <div class="row-fluid">
+
+              <div class="span4 scheduled_class">
+                {% if class.seats_remaining > 0 %}
+                  <a class="custom_btn" style="margin-top: 10px; margin-left: 20px; background-color: #9a3c2f; padding: 12px 31px; font-weight: bold; color: white; font-size: 14px; float: left;">Sign Up</a>
+                  <br /><br /><br /><br />
+                  <span style="color: #3f4e7d"><h5>{{ class.seats_remaining }} {{ class.seats_remaining == 1 ? 'seat' : 'seats' }} left in the class</h5></span>
+                {% else %}
+                  <a class="custom_btn" style="margin-top: 10px; background-color: white; padding: 12px 31px; font-weight: bold; color: #9a3c2f; font-size: 14px; float: left;">No Seats Left!</a>
+                {% endif %}
+              </div>
+
+              <div class="span8">
+                {{ class.description|raw }}
+              </div>
+
+          </div>
+        </div></div>
+
+        {% endfor %}
+
+      </div>
+    </div>
+
+    <div class="row-fluid" style="margin-top: 50px; margin-bottom: -30px;">
+      <div class="span12">
+        <i style="margin-left:25px;">Note: All times are in Central Time - US/Chicago</i>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
