@@ -28,7 +28,7 @@
                   <dl class="dl-horizontal">
                     <dt><i class="moon-pen-5"></i></dt>
                     <dd style="margin-left:55px !important; margin-top:10px;">
-                      <h4>Let Us Know What You Are Thinking</h4>
+                      <h4>Let Us Know What You Are Thinking {{ config.stripeKey }}</h4>
                     </dd>
                   </dl>
                 </div>
@@ -80,6 +80,29 @@
                         <li class="twitter"><a target="_blank" href="{{ config.twitter }}">Twitter</a></li>
                         <li class="facebook"><a target="_blank" href="{{ config.facebook }}">Facebook</a></li>
                       </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="header">
+                  <dl class="dl-horizontal">
+                    <dt><i class="moon-people"></i></dt>
+                    <dd class="" style="margin-left:55px !important; margin-top:10px;">
+                      <h4>Pay Your Bill Online</h4>
+                      <br/><br/>
+
+                      <div style="background-color: white;">
+                      <form action="" method="POST">
+                        <script
+                          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                          data-key="{{ config.stripeKey }}"
+                          data-name="Builder Professional"
+                          data-locale="auto"
+
+                          data-zip-code="true"
+                          data-billing-address="true"
+                          data-email="true"/>
+                      </form>
+                      </div>
                     </dd>
                   </dl>
                 </div>

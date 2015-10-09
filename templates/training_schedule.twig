@@ -35,9 +35,11 @@
 
               <div class="span4 scheduled_class">
                 {% if class.seats_remaining > 0 %}
-                  <a class="custom_btn" style="margin-top: 10px; margin-left: 20px; background-color: #9a3c2f; padding: 12px 31px; font-weight: bold; color: white; font-size: 14px; float: left;">Sign Up</a>
+                  <a href="training_signup.php?classId={{ class.training_class_id }}" class="custom_btn"
+                     style="margin-top: 10px; margin-left: 20px; background-color: #9a3c2f; padding: 12px 31px; font-weight: bold; color: white; font-size: 14px; float: left;">
+                    Sign Up - ${{ class.price|number_format(2) }}</a>
                   <br /><br /><br /><br />
-                  <span style="color: #3f4e7d"><h5>{{ class.seats_remaining }} {{ class.seats_remaining == 1 ? 'seat' : 'seats' }} left in the class</h5></span>
+                  <span style="color: #3f4e7d"><h5 style="margin-left: 25px;">{{ class.seats_remaining }} {{ class.seats_remaining == 1 ? 'seat' : 'seats' }} left in the class</h5></span>
                 {% else %}
                   <a class="custom_btn" style="margin-top: 10px; background-color: white; padding: 12px 31px; font-weight: bold; color: #9a3c2f; font-size: 14px; float: left;">No Seats Left!</a>
                 {% endif %}

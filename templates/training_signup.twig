@@ -1,0 +1,123 @@
+{% extends "base.twig" %}
+
+{% block main_content %}
+  {% include 'content_page_header.twig' with {
+    'pageTitle': 'Sign Up for a Training Class',
+      'breadcrumbs': [
+      {'href': 'index.php', 'label': 'Home'},
+      {'href': 'training.php', 'label': 'Training'},
+      {'href': 'training_schedule.php', 'label': 'Schedule'}
+    ]
+  } %}
+
+  <section id="content" class="page-dynamic_template-contactpa sequentialchildren section_first ">
+    <div class="row-fluid">
+      <div class="span12">
+
+        <div class="row-fluid row-dynamic-el " style="">
+
+          <div style="text-align: center">
+            <span class="{{ extra.successAlertClass }} alert alert-grey"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> Thanks for contacting us!</span>
+          </div>
+
+          <div class="container">
+
+            <div class="row-fluid">
+
+              <div class="span7 contact_form">
+                <div class="header">
+                  <dl class="dl-horizontal">
+                    <dt><i class="moon-pen-5"></i></dt>
+                    <dd style="margin-left:55px !important; margin-top:10px;">
+                      <h4>Send Us Your Reservation for {{ 'hello' }}</h4>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="row-fluid">
+                  <div class="row-fluid">
+
+                    <div class="span12">
+                      <form action="processcontact.php" name="contactForm" id="contactForm" class="standard-form row-fluid" action="contact_form.php" method="post">
+
+                        <input class="span6 contact_form_name" name="name" placeholder="Name (required)" type="text" id="themeple_name" value=""/>
+                        <input class="span6 contact_form_email" name="email" placeholder="E-Mail (required)" type="text" id="themeple_e-mail" value=""/>
+                        <input class="span6 contact_form_subject" name="subject" placeholder="Subject (required)" type="text" id="themeple_subject" value=""/>
+                        <textarea class="span12 contact_form_content" placeholder="Content (required)" name="themeple_content" cols="40" rows="7" id="themeple_content"></textarea>
+
+                        <input type="hidden" name="token" value="1123581321" />
+                        <p class="perspective"><input type="submit" value="Send Message" class="custom_btn"/> <span class="contact_form_error_message hiddenaway bp_deep_red">Please complete all required fields.</span></p></form>
+                      <div id="ajaxresponse"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="span5 post_page_cont">
+                <div class="header">
+                  <dl class="dl-horizontal">
+                    <dt><i class="moon-file-2"></i></dt>
+                    <dd class="" style="margin-left:55px !important; margin-top:10px;">
+                      <h4>Get in Touch</h4>
+                      <br/>
+
+                      <ul class="contact_list">
+                        {% for contactMethod in config.contactMethods %}
+                          <li>{{ contactMethod.label }}
+                            <span>{{ contactMethod.value }}</span></li>
+                        {% endfor %}
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="header">
+                  <dl class="dl-horizontal">
+                    <dt><i class="moon-people"></i></dt>
+                    <dd class="" style="margin-left:55px !important; margin-top:10px;">
+                      <h4>Connect on Social Media</h4>
+                      <br/>
+
+                      <ul class="contact_list">
+                        <li class="linkedin"><a target="_blank" href="{{ config.linkedin }}">LinkedIn</a></li>
+                        <li class="twitter"><a target="_blank" href="{{ config.twitter }}">Twitter</a></li>
+                        <li class="facebook"><a target="_blank" href="{{ config.facebook }}">Facebook</a></li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="header">
+                  <dl class="dl-horizontal">
+                    <dt><i class="moon-people"></i></dt>
+                    <dd class="" style="margin-left:55px !important; margin-top:10px;">
+                      <h4>Pay Your Bill Online</h4>
+                      <br/><br/>
+
+                      <div style="background-color: white;">
+                        <form action="" method="POST">
+                          <script
+                              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                              data-key="{{ config.stripeKey }}"
+                              data-name="Builder Professional"
+                              data-locale="auto"
+
+                              data-zip-code="true"
+                              data-billing-address="true"
+                              data-email="true"/>
+                        </form>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <p></p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
