@@ -60,7 +60,7 @@ if ($stripeCustomerSuccess && $plan['one_time_fee'])
 
     try {
         \Stripe\Charge::create([
-            'amount' => $plan['one_time_total'] * 100,
+            'amount' => intval($plan['one_time_total'] * 100),
             'currency' => 'usd',
             'customer' => $customer->id,
         ]);
@@ -79,5 +79,5 @@ if ($_SERVER['ENVIRONMENT_NAME'] == 'stage')
     $subject .= ' - TESTING ENVIRONMENT NOT REAL CUSTOMER';
 }
 
-mail('tony.vance@builderprofessional.com', 'Recurring Signup', $emailMessage, "From: billing@builderprofessional.com\r\n");
+mail('tony.vance@builderprofessional.com', $subject, $emailMessage, "From: billing@builderprofessional.com\r\n");
 start_page('recurring_signup_complete.twig', ['plan' => $plan]);
