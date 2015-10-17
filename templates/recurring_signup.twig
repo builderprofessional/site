@@ -87,55 +87,55 @@
             <label for="CompanyName">
               Company/Builder Name
             </label>
-            <input type="text" name="CompanyName" id="CompanyName" value="{% if extra.postedData.CompanyName is defined %}{{ CompanyName }}{% endif %}" placeholder="Enter your Company name here" onchange="$('#CompanySpan').html($(this).val());">
+            <input type="text" name="CompanyName" id="CompanyName" value="{% if extra.postedData.CompanyName is defined %}{{ extra.postedData.CompanyName }}{% endif %}" placeholder="Enter your Company name here" onchange="$('#CompanySpan').html($(this).val());">
             </div>
             <div class="span2">
               <label for="FirstName">
                 Cardholder First Name
               </label>
-              <input type="text" name="FirstName" id="FirstName" value="{% if extra.postedData.FirstName is defined %}{{ FirstName }}{% endif %}" placeholder="Enter your First name here" class="span2">
+              <input type="text" name="FirstName" id="FirstName" value="{% if extra.postedData.FirstName is defined %}{{ extra.postedData.FirstName }}{% endif %}" placeholder="Enter your First name here" class="span2">
             </div>
             <div class="span2">
               <label for="LastName">
                 Last Name
               </label>
-              <input type="text" name="LastName" id="LastName" value="{% if extra.postedData.LastName is defined %}{{ LastName }}{% endif %}" placeholder="Enter your Last name here" class="span2">
+              <input type="text" name="LastName" id="LastName" value="{% if extra.postedData.LastName is defined %}{{ extra.postedData.LastName }}{% endif %}" placeholder="Enter your Last name here" class="span2">
             </div>
             <div class="span12">
               <label for="LastName">
                 Address
               </label>
-              <input type="text" name="Address1" id="Address1" value="{% if extra.postedData.Address1 is defined %}{{ Address1 }}{% endif %}" placeholder="Enter your street address">
+              <input type="text" name="Address1" id="Address1" value="{% if extra.postedData.Address1 is defined %}{{ extra.postedData.Address1 }}{% endif %}" placeholder="Enter your street address">
             </div>
             <div class="span2">
               <label for="City">
                 City
               </label>
-              <input type="text" name="City" id="City" value="{% if extra.postedData.City is defined %}{{ City }}{% endif %}" placeholder="City" class="span2">
+              <input type="text" name="City" id="City" value="{% if extra.postedData.City is defined %}{{ extra.postedData.City }}{% endif %}" placeholder="City" class="span2">
             </div>
             <div class="span1">
               <label for="State">
                 State
               </label>
-              <input type="text" name="State" id="State" value="{% if extra.postedData.State is defined %}{{ State }}{% endif %}" placeholder="State" class="span1">
+              <input type="text" name="State" id="State" value="{% if extra.postedData.State is defined %}{{ extra.postedData.State }}{% endif %}" placeholder="State" class="span1">
             </div>
             <div class="span2">
               <label for="PostalCode">
                 PostalCode
               </label>
-              <input type="text" name="PostalCode" id="PostalCode" value="{% if extra.postedData.PostalCode is defined %}{{ PostalCode }}{% endif %}" placeholder="Zip" class="span2" onchange="setBillingZip(this)">
+              <input type="text" name="PostalCode" id="PostalCode" value="{% if extra.postedData.PostalCode is defined %}{{ extra.postedData.PostalCode }}{% endif %}" placeholder="Zip" class="span2" onchange="setBillingZip(this)">
             </div>
             <div class="span12">
               <label for="Phone">
                 Phone
               </label>
-              <input type="text" name="Phone" id="Phone" value="{% if extra.postedData.Phone is defined %}{{ Phone }}{% endif %}" placeholder="Phone" class="span4">
+              <input type="text" name="Phone" id="Phone" value="{% if extra.postedData.Phone is defined %}{{ extra.postedData.Phone }}{% endif %}" placeholder="Phone" class="span4">
             </div>
             <div class="span12">
               <label for="Email">
                 Email
               </label>
-              <input type="text" name="Email" id="Email" value="{% if extra.postedData.Email is defined %}{{ Email }}{% endif %}" placeholder="Email" class="span4">
+              <input type="text" name="Email" id="Email" value="{% if extra.postedData.Email is defined %}{{ extra.postedData.Email }}{% endif %}" placeholder="Email" class="span4">
             </div>
           </fieldset>
             {% if extra.postedData.PostalCode is defined and extra.postedData.PostalCode is not empty %}
