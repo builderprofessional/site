@@ -1,10 +1,8 @@
 {% extends "base.twig" %}
 
 {% block main_content %}
-  {% include 'index_slider.twig' %}
-
   <!-- .header -->
-  <section id="content" class="page-dynamic_template-home sequentialchildren  ">
+  <section id="content" class="page-dynamic_template-home sequentialchildren  " style="padding-bottom: 0px;">
     <div class="row-fluid">
       <div class="span12">
         <div class="row-fluid row-dynamic-el " style="">
@@ -28,8 +26,10 @@
     </div>
   </section>
 
+  {% include 'index_slider.twig' %}
+
   <div class="row-fluid row-dynamic-el section-style"
-       style="background-image:url(content/images/all/07/parallex2.png);  background-repeat: no-repeat;background-position: 50% 0%;background-attachment: fixed; ">
+       style="margin-top: 100px; background-image:url(content/images/all/07/parallex2.png);  background-repeat: no-repeat;background-position: 50% 0%;background-attachment: fixed; ">
     <div class="container">
       <div class="row-fluid">
         <div class="row-fluid row-dynamic-el">
