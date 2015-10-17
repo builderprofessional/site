@@ -2,10 +2,12 @@
 require_once('config.php');
 require_once('twig_setup.php');
 
-$dbhost = 'localhost';
-$dbname = 'builderp_stage';
-$dbuser = 'builderp_stage';
-$dbpass = 'builderp_stage';
+global $config;
+
+$dbhost = $config['dbhost'];
+$dbname = $config['dbname'];
+$dbuser = $config['dbuser'];
+$dbpass = $config['dbpass'];
 
 $conn = mysql_connect($dbhost, $dbuser, $dbpass);
 mysql_select_db($dbname, $conn);
