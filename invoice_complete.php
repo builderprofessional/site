@@ -9,7 +9,7 @@ global $conn;
 global $config;
 
 $emailMessage = "
-Signup for %s\n\n
+Payment for %s %s\n\n
 Company: %s\n
 Name: %s %s\n\n
 
@@ -56,8 +56,8 @@ if (!$success) {
 }
 
 $emailMessage = sprintf($emailMessage,
-    $plan['name'], $_REQUEST['CompanyName'], $_REQUEST['FirstName'], $_REQUEST['LastName'], $_REQUEST['Address1'], $_REQUEST['City'],
-    $_REQUEST['State'], $_REQUEST['PostalCode'], $_REQUEST['Phone'], $_REQUEST['Email'], $_REQUEST['Amount'], $success ? 'yes' : 'no');
+    $plan['name'], $_REQUEST['InvoiceNumber'], $_REQUEST['CompanyName'], $_REQUEST['FirstName'], $_REQUEST['LastName'], $_REQUEST['Address1'],
+    $_REQUEST['City'], $_REQUEST['State'], $_REQUEST['PostalCode'], $_REQUEST['Phone'], $_REQUEST['Email'], $_REQUEST['Amount'], $success ? 'yes' : 'no');
 
 $subject = 'Invoice Paid';
 if ($_SERVER['ENVIRONMENT_NAME'] == 'stage')
