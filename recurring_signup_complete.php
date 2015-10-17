@@ -52,9 +52,13 @@ try {
     $stripeCustomerSuccess = false;
 }
 
+if (!$stripeCustomerSuccess) {
+    start_page('recurring_signup.twig', ['plan' => $plan, 'errorMessage' => $stripeCustomerId, 'postedData' => $_REQUEST]);
+    exit;
+}
 
 $initialChargeNote = "";
-if ($stripeCustomerSuccess && $plan['one_time_fee'])
+if ($stripeCustomerSuccess && $plan['one_time_fee'] > 0)
 {
     $initialChargeNote = "Ran Charge for " . $plan['one_time_total'];
 
