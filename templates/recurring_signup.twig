@@ -18,6 +18,7 @@
       if (response.error) {
         // Show the errors on the form
         $form.find('.payment-errors').text(response.error.message);
+        $form.find('.payment-errors').show();
         $form.find('button').prop('disabled', false);
       } else {
         // response contains id and card, which contains additional card details
@@ -55,6 +56,12 @@
     jQuery(function($) {
       $('#payment-form').submit(function(event) {
         var $form = $(this);
+        if ( ! $('#AgreeToTerms').is(':checked') )
+        {
+          $form.find('.payment-errors').text('You must agree to the terms of the agreement to continue.');
+          $form.find('.payment-errors').show();
+          return false;
+        }
 
         // Disable the submit button to prevent repeated clicks
         $form.find('button').prop('disabled', true);
@@ -117,6 +124,18 @@
                 PostalCode
               </label>
               <input type="text" name="PostalCode" id="PostalCode" placeholder="Zip" class="span2" onchange="setBillingZip(this)">
+            </div>
+            <div class="span12">
+              <label for="Phone">
+                Phone
+              </label>
+              <input type="text" name="Phone" id="Phone" placeholder="Phone" class="span4">
+            </div>
+            <div class="span12">
+              <label for="Email">
+                Email
+              </label>
+              <input type="text" name="Email" id="Email" placeholder="Email" class="span4">
             </div>
           </fieldset>
           </div>
@@ -183,7 +202,7 @@
           <div class="span12">
             <fieldset>
               <legend>Payment Details</legend>
-              <span class="payment-errors"></span>
+              <div class="payment-errors alert alert-danger alert-dismissable" style="display:none;"></div>
             <div class="span12">
               <label for="Credit Card Number">
                 Credit Card Number
@@ -222,7 +241,7 @@
               <legend>Agreement</legend>
               <label>
                 <input type="checkbox" name="AgreedToTerms" id="AgreedToTerms"> I have the authority to enter into agreements on behalf of
-                <span id="CompanySpan">My Company</span> and I do so agree to the <a style="cursor:pointer;" id="terms">terms and conditions.</a>
+                <span id="CompanySpan">My Company</span> and I do so agree to the <a style="cursor:pointer;" id="terms">terms of this agreement.</a>
               </label>
               <script type="text/javascript">
                 $('#terms').click(function(){
