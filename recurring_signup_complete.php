@@ -1,9 +1,10 @@
 <?php
+require_once('setup.php');
+/*
 if (!isset($_REQUEST['StripeToken'])) {
 //    die();
 }
 
-require_once('setup.php');
 
 global $conn;
 global $config;
@@ -25,6 +26,7 @@ Initial Charge ID: %s\n
 ";
 
 
+*/
 $query = "SELECT * FROM recurring_plan WHERE id=%s";
 $query = sprintf($query, mysql_real_escape_string($_REQUEST['PlanId']));
 
@@ -32,6 +34,7 @@ $dbResult = mysql_query($query);
 $plan = mysql_fetch_assoc($dbResult);
 
 
+/*
 \Stripe\Stripe::setApiKey($config['stripeSecretKey']);
 $stripeToken = $_POST['StripeToken'];
 
@@ -84,4 +87,5 @@ if ($_SERVER['ENVIRONMENT_NAME'] == 'stage')
 }
 
 mail('billing@builderprofessional.com', $subject, $emailMessage, "From: billing@builderprofessional.com\r\n");
+*/
 start_page('recurring_signup_complete.twig', ['plan' => $plan]);

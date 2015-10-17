@@ -374,3 +374,8 @@ td.text-right {
 td.currency:before {
   content:'$'
 }
+.alert-success.alert-success {
+  color:darkgreen;
+  background-color:lightgreen;
+  border-color:green;
+}
