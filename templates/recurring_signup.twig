@@ -190,10 +190,10 @@
                     <td class="text-right currency">{{ extra.plan.one_time_total|number_format(2) }}</td>
                   </tr>
                 {% endif %}
-              {% else %}
+              {% elseif extra.plan.key_name != 'HOSTING' %}
                 <thead>
                 <tr>
-                  <th colspan="2">You will not be charged at this time {{ extra.plan.one_time_fee }}</th>
+                  <th colspan="2">You will not be charged at this time</th>
                 </tr>
                 </thead>
               {% endif %}
@@ -322,7 +322,7 @@
                 {# Terms for non-artisanal sites #}
             </fieldset>
             <fieldset>
-              <button type="submit">Submit Payment</button>
+              <button type="submit">Authorize Payment</button>
             </fieldset>
           </div>
         </form>
