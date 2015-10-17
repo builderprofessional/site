@@ -56,7 +56,7 @@
     jQuery(function($) {
       $('#payment-form').submit(function(event) {
         var $form = $(this);
-        if ( ! $('#AgreeToTerms').is(':checked') )
+        if ( ! $('#AgreedToTerms').is(':checked') )
         {
           $form.find('.payment-errors').text('You must agree to the terms of the agreement to continue.');
           $form.find('.payment-errors').show();
