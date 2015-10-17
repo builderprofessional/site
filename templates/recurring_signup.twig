@@ -79,7 +79,7 @@
   <div class="container">
     <div class="row">
       <div class="span12">
-        <form action="/recurring_signup_complete.php" method="POST" name="payment-form" id="payment-form">
+        <form action="{% if extra.plan.key_name == 'INVOICE' %}/invoice_complete.php{% else %}/recurring_signup_complete.php{% endif %}" method="POST" name="payment-form" id="payment-form">
           <div class="span6">
           <fieldset>
             <legend>Company Details</legend>
@@ -147,6 +147,23 @@
             {% endif %}
           </div>
           <div class="span6 ">
+            {% if extra.plan.key_name == 'INVOICE' %}
+            <fieldset>
+              <legend>Your Payment Information</legend>
+              <div class="span12">
+                <label for="InvoiceNumber">
+                  Invoice #
+                </label>
+                <input type="text" name="InvoiceNumber" id="InvoiceNumber" value="" placeholder="Invoice # of the Invoice you are Paying" class="span4">
+              </div>
+              <div class="span12">
+                <label for="Amount">
+                  Amount
+                </label>
+                <input type="text" name="Amount" id="Amount" value="" placeholder="Amount You are Paying" class="span4 Amount">
+              </div>
+            </fieldset>
+            {% else %}
             <fieldset>
               <legend>Your Plan</legend>
             <h2>{{ extra.plan.name }}</h2>
@@ -176,7 +193,7 @@
               {% else %}
                 <thead>
                 <tr>
-                  <th colspan="2">You will not be charged at this time</th>
+                  <th colspan="2">You will not be charged at this time {{ extra.plan.one_time_fee }}</th>
                 </tr>
                 </thead>
               {% endif %}
@@ -205,6 +222,7 @@
               {% endif %}
             </table>
             </fieldset>
+            {% endif %}
           </div>
           <div class="span12">
             <fieldset>
@@ -258,6 +276,10 @@
               </script>
                 {# Terms for artisanal sites #}
                 <ul id="termsblock" style="display:none;">
+                  {% if extra.plan.key_name == "INVOICE" %}
+                  <li> Client agrees that they are paying for services rendered as invoiced in the associated invoice.</li>
+                  {% endif %}
+                  {% if extra.plan.key_name != "INVOICE" %}
                   <li> Services will be provided by Builder Professional Technology, LLC as described in this agreement.</li>
                   <li> Payments shall be made by the client to Builder Professional Technology, LLC, Duncanville, TX 75137.</li>
                   <li> Client agrees to pay Builder Professional the amounts indicated in this proposal including any
@@ -273,6 +295,7 @@
                   <li> Client certifies that client is an authorized user of the credit card provided and that client and its officers
                   will not dispute these scheduled transactions with Client's bank or credit card company; so long as the
                   transactions correspond to the terms indicated in this authorization.</li>
+                  {% endif %}
                   {% if extra.plan.key_name == 'ARTISANAL' %}
                   <li> Client further authorizes Builder Professional to charge this credit card or any updated credit card a
                   cancellation fee of two (2) times the monthly amount if the client cancels service before the end of the first
@@ -282,9 +305,9 @@
                     the full website will be provided to the client as a static set of web pages suitable for display on any hosting provider but
                     without the content management which is proprietary to Builder Professional.
                   </li>
-                  {% endif %}
                   <li> This agreement may be terminated after twelve (12) months by either party upon thirty (30) days prior
-                  written notice to the other party. An email notice by one party will suffice.</li>
+                      written notice to the other party. An email notice by one party will suffice.</li>
+                  {% endif %}
                   <li> This is the entire agreement of the parties and there are no other promises or conditions in any other
                   agreement concerning the subject matter of this contract. This contract supersedes any prior written or oral
                   agreement between the parties.</li>
