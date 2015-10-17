@@ -2,3 +2,4 @@ vendor
 error_log
 config
 .idea
+.htaccess
