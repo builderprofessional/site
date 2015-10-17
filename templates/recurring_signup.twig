@@ -296,6 +296,11 @@
                   will not dispute these scheduled transactions with Client's bank or credit card company; so long as the
                   transactions correspond to the terms indicated in this authorization.</li>
                   {% endif %}
+                  {% if extra.plan.key_name == "INVOICE" %}
+                  <li> Client certifies that client is an authorized user of the credit card provided and that client and its officers
+                    will not dispute this transaction with Client's bank or credit card company; so long as the
+                    transaction corresponds to the terms indicated in this authorization.</li>
+                  {% endif %}
                   {% if extra.plan.key_name == 'ARTISANAL' %}
                   <li> Client further authorizes Builder Professional to charge this credit card or any updated credit card a
                   cancellation fee of two (2) times the monthly amount if the client cancels service before the end of the first
@@ -308,9 +313,11 @@
                   <li> This agreement may be terminated after twelve (12) months by either party upon thirty (30) days prior
                       written notice to the other party. An email notice by one party will suffice.</li>
                   {% endif %}
+                  {% if extra.plan.key_name != "INVOICE" %}
                   <li> This is the entire agreement of the parties and there are no other promises or conditions in any other
                   agreement concerning the subject matter of this contract. This contract supersedes any prior written or oral
                   agreement between the parties.</li>
+                  {% endif %}
                 </ul>
                 {# Terms for non-artisanal sites #}
             </fieldset>
