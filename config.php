@@ -1,5 +1,8 @@
 <?php
-$config = [];
+$configFile = dirname(__FILE__) . '/../config.' . $_SERVER['ENVIRONMENT_NAME'] . '.json';
+$configFileContents = file_get_contents($configFile);
+
+$config = json_decode($configFileContents, true);
 
 $config['page_name'] = basename($_SERVER['PHP_SELF']);
 $config['twitter'] = 'https://twitter.com/wehelpbuilders';
