@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block main_content %}
+  {% include 'content_page_header.twig' with {
+    'pageTitle': 'Confirm Your Artisanal Site',
+    'breadcrumbs': [
+      {'href': 'index.php', 'label': 'Home'},
+      {'href': 'artisanal.php', 'label': 'Artisanal Site'}
+    ]
+  } %}
+
+{% endblock %}
