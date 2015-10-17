@@ -1,12 +1,16 @@
 {% extends "base.twig" %}
 
 {% block main_content %}
+  {% set pageTitle = 'Confirm Your Signup for ' ~ extra.plan.name  %}
+
   {% include 'content_page_header.twig' with {
-    'pageTitle': 'Confirm Your Artisanal Site',
+    'pageTitle': pageTitle,
     'breadcrumbs': [
       {'href': 'index.php', 'label': 'Home'},
-      {'href': 'artisanal.php', 'label': 'Artisanal Site'}
+      {'href': 'artisanal.php', 'label': extra.plan.name}
     ]
   } %}
+
+  {{ extra.plan.name }}
 
 {% endblock %}
