@@ -192,7 +192,7 @@
                   </tr>
                   <tr>
                     <th>Total</th>
-                    <td class="text-right currency">{{ extra.plan.recurring_total|number_format(2) }}</td>
+                    <td class="text-right currency {% if extra.plan.one_time_fee <=0 %}success{% endif %}">{{ extra.plan.recurring_total|number_format(2) }}</td>
                   </tr>
                 {% endif %}
               {% endif %}
