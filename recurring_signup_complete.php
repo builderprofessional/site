@@ -56,11 +56,11 @@ try {
 $initialChargeNote = "";
 if ($stripeCustomerSuccess && $plan['one_time_fee'])
 {
-    $initialChargeNote = "Ran Charge for " . $plan['one_time_fee'];
+    $initialChargeNote = "Ran Charge for " . $plan['one_time_total'];
 
     try {
         \Stripe\Charge::create([
-            'amount' => $plan['one_time_fee'] * 100,
+            'amount' => $plan['one_time_total'] * 100,
             'currency' => 'usd',
             'customer' => $customer->id,
         ]);
