@@ -368,3 +368,9 @@
 .contact_social_media_icons li.linkedin .icon { background-position: -33px -14px; }
 .contact_social_media_icons li.facebook .icon { background-position: -161px -14px; }
 .contact_social_media_icons li.youtube .icon { background-position: -467px -14px; }
+td.text-right {
+  text-align: right !important;
+}
+td.currency:before {
+  content:'$'
+}
