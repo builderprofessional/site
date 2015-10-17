@@ -51,7 +51,7 @@
       cname.val(fname.val()+' '+lname.val());
     }
     // This identifies your website in the createToken call below
-    Stripe.setPublishableKey('{{ extra.publishable_key }}');
+    Stripe.setPublishableKey('{{ config.stripePublicKey }}');
     jQuery(function($) {
       $('#payment-form').submit(function(event) {
         var $form = $(this);
@@ -120,7 +120,67 @@
             </div>
           </fieldset>
           </div>
-          <div class="span6">
+          <div class="span6 ">
+            <fieldset>
+              <legend>Your Plan</legend>
+            <h2>{{ extra.plan.name }}</h2>
+            <table class="payment_table table table-bordered table-hover table-condensed">
+              {% if extra.plan.one_time_fee > 0 %}
+                <thead>
+                <tr>
+                  <th colspan="2">
+                    You will pay today:
+                  </th>
+                </tr>
+                </thead>
+                <tr {% if extra.plan.one_time_tax <=0 %}class="success"{% endif %}>
+                  <th>Setup Fee</th>
+                  <td class="text-right currency">{{ extra.plan.one_time_fee|number_format(2) }}</td>
+                </tr>
+                {% if extra.plan.one_time_tax > 0 %}
+                  <tr>
+                    <th>Tax</th>
+                    <td class="text-right currency">{{ extra.plan.one_time_tax|number_format(2) }}</td>
+                  </tr>
+                  <tr class="success">
+                    <th>Total</th>
+                    <td class="text-right currency">{{ extra.plan.one_time_total|number_format(2) }}</td>
+                  </tr>
+                {% endif %}
+              {% else %}
+                <thead>
+                <tr>
+                  <th colspan="2">You will not be charged at this time</th>
+                </tr>
+                </thead>
+              {% endif %}
+              {% if extra.plan.recurring_fee > 0 %}
+                <thead>
+                <tr>
+                  <th colspan="2">
+                    Your recurring {% if extra.plan.term == 1 %}monthly{% else %}annual{% endif %} fee will be:
+                  </th>
+                </tr>
+                </thead>
+                <tr>
+                  <th>Recurring Fee</th>
+                  <td class="text-right currency">{{ extra.plan.recurring_fee|number_format(2) }}</td>
+                </tr>
+                {% if extra.plan.recurring_tax > 0 %}
+                  <tr>
+                    <th>Tax</th>
+                    <td class="text-right currency">{{ extra.plan.recurring_tax|number_format(2) }}</td>
+                  </tr>
+                  <tr>
+                    <th>Total</th>
+                    <td class="text-right currency">{{ extra.plan.recurring_total|number_format(2) }}</td>
+                  </tr>
+                {% endif %}
+              {% endif %}
+            </table>
+            </fieldset>
+          </div>
+          <div class="span12">
             <fieldset>
               <legend>Payment Details</legend>
               <span class="payment-errors"></span>
@@ -155,74 +215,23 @@
                 <input type="hidden" data-stripe="address_state" id="BillingState">
                 <input type="hidden" name="PlanId" id="PlanId" value="{{ extra.plan.id }}">
               </div>
-              <div class="span6">
-                <label for="Plan">
-                  Your Plan
-                </label>
-                <h2>{{ extra.plan.name }}</h2>
-                <table class="payment_table table table-bordered table-hover table-condensed">
-                  {% if extra.plan.one_time_fee > 0 %}
-                    <thead>
-                      <tr>
-                        <th colspan="2">
-                          You will pay today:
-                        </th>
-                      </tr>
-                    </thead>
-                    <tr>
-                      <th>Setup Fee</th>
-                      <td class="text-right currency">{{ extra.plan.one_time_fee|number_format(2) }}</td>
-                    </tr>
-                    {% if extra.plan.one_time_tax > 0 %}
-                    <tr>
-                      <th>Tax</th>
-                      <td class="text-right currency">{{ extra.plan.one_time_tax|number_format(2) }}</td>
-                    </tr>
-                    <tr>
-                      <th>Total</th>
-                      <td class="text-right currency">{{ extra.plan.one_time_total|number_format(2) }}</td>
-                    </tr>
-                    {% endif %}
-                  {% else %}
-                    <thead>
-                      <tr>
-                        <th colspan="2">You will not be charged at this time</th>
-                      </tr>
-                    </thead>
-                  {% endif %}
-                  {% if extra.plan.recurring_fee > 0 %}
-                    <thead>
-                    <tr>
-                      <th colspan="2">
-                        Your recurring {% if extra.plan.term == 1 %}monthly{% else %}annual{% endif %} fee will be:
-                      </th>
-                    </tr>
-                    </thead>
-                    <tr>
-                      <th>Recurring Fee</th>
-                      <td class="text-right currency">{{ extra.plan.recurring_fee|number_format(2) }}</td>
-                    </tr>
-                    {% if extra.plan.recurring_tax > 0 %}
-                    <tr>
-                      <th>Tax</th>
-                      <td class="text-right currency">{{ extra.plan.recurring_tax|number_format(2) }}</td>
-                    </tr>
-                      <tr>
-                        <th>Total</th>
-                        <td class="text-right currency">{{ extra.plan.recurring_total|number_format(2) }}</td>
-                      </tr>
-                    {% endif %}
-                  {% endif %}
-                </table>
-              </div>
             </fieldset>
           </div>
           <div class="span12">
             <fieldset>
               <legend>Agreement</legend>
-              {{ extra.plan.name }}
+              <label>
+                <input type="checkbox" name="AgreedToTerms" id="AgreedToTerms"> I have the authority to enter into agreements on behalf of
+                <span id="CompanySpan">My Company</span> and I do so agree to the <a style="cursor:pointer;" id="terms">terms and conditions.</a>
+              </label>
+              <script type="text/javascript">
+                $('#terms').click(function(){
+                  $('#termsblock').toggle();
+
+                })
+              </script>
                 {# Terms for artisanal sites #}
-                <ul>
+                <ul id="termsblock" style="display:none;">
                   <li> Services will be provided by Builder Professional Technology, LLC as described in this agreement.</li>
                   <li> Payments shall be made by the client to Builder Professional Technology, LLC, Duncanville, TX 75137.</li>
                   <li> Client agrees to pay Builder Professional the amounts indicated in this proposal including any
@@ -255,10 +264,6 @@
                   agreement between the parties.</li>
                 </ul>
                 {# Terms for non-artisanal sites #}
-              <label>
-                <input type="checkbox" name="AgreedToTerms" id="AgreedToTerms"> I have the authority to enter into agreements on behalf of
-                <span id="CompanySpan">My Company</span> and I do so agree to the above terms and conditions.
-              </label>
             </fieldset>
             <fieldset>
               <button type="submit">Submit Payment</button>
