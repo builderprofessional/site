@@ -83,5 +83,5 @@ if ($_SERVER['ENVIRONMENT_NAME'] == 'stage')
     $subject .= ' - TESTING ENVIRONMENT NOT REAL CUSTOMER';
 }
 
-mail('tony.vance@builderprofessional.com', $subject, $emailMessage, "From: billing@builderprofessional.com\r\n");
+mail('billing@builderprofessional.com', $subject, $emailMessage, "From: billing@builderprofessional.com\r\n");
 start_page('recurring_signup_complete.twig', ['plan' => $plan]);
