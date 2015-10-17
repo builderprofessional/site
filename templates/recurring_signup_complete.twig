@@ -1,1 +1,15 @@
-yo
+{% extends "base.twig" %}
+
+{% block main_content %}
+  {% include 'content_page_header.twig' with {
+    'pageTitle': 'Thanks for Your Business',
+    'breadcrumbs': [
+      {'href': 'index.php', 'label': 'Home'},
+      {'href': 'artisanal.php', 'label': 'Thanks for Your Business'}
+    ]
+  } %}
+
+  <p>Thank you for choosing Builder Professional. If you have any questions or issues, please don't hesitate to
+  contact us at sales@builderprofessional.com or (844) 63-BUILD.</p>
+
+{% endblock %}

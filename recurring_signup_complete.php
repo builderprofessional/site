@@ -73,5 +73,11 @@ $emailMessage = sprintf($emailMessage,
     $plan['name'], $_REQUEST['CompanyName'], $_REQUEST['FirstName'], $_REQUEST['LastName'], $_REQUEST['Address1'], $_REQUEST['City'],
     $_REQUEST['State'], $_REQUEST['PostalCode'], $_REQUEST['Phone'], $_REQUEST['Email'], $stripeCustomerId, $initialChargeNote);
 
+$subject = 'Recurring Signup';
+if ($_SERVER['ENVIRONMENT_NAME'] == 'stage')
+{
+    $subject .= ' - TESTING ENVIRONMENT NOT REAL CUSTOMER';
+}
+
 mail('tony.vance@builderprofessional.com', 'Recurring Signup', $emailMessage, "From: billing@builderprofessional.com\r\n");
 start_page('recurring_signup_complete.twig', ['plan' => $plan]);
